@@ -87,5 +87,31 @@
     "missingTokenErr": "Missing token. The link is incorrect.",
     "requestNewLink": "Request a new link",
     "loginInstead": "Or click here to login"
+  },
+  "admin": {
+    "panelTitle": "Admin Databank",
+    "casesIndex": "Investigation Files Index",
+    "newCaseBtn": "Create New Case",
+    "editCaseBtn": "Edit",
+    "deleteCaseBtn": "Delete",
+    "loading": "Loading admin databank...",
+    "confirmDelete": "Are you sure you want to delete this case? This action cannot be undone.",
+    "createCaseTitle": "Create New Addendum",
+    "editCaseTitle": "Edit Case Addendum",
+    "backBtn": "Back to Databank",
+    "formTitleLabel": "Case Title",
+    "formStoryLabel": "Story",
+    "formHintLabel": "Hint (Optional)",
+    "formCorrectLocationLabel": "Correct Location",
+    "formExplanationLocationLabel": "Location Explanation",
+    "formCorrectSuspectLabel": "Correct Suspect",
+    "formExplanationSuspectLabel": "Suspect Explanation",
+    "formCorrectWeaponLabel": "Correct Weapon (Anti-pattern)",
+    "formExplanationWeaponLabel": "Weapon Explanation",
+    "formLangLabel": "Language",
+    "formSubmitBtn": "Save Data to Archive",
+    "formSavingBtn": "Saving...",
+    "formSuccess": "Case saved successfully. Returning to indexing...",
+    "formError": "Error saving the case. Check the fields."
   }
 }

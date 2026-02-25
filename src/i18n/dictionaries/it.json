@@ -87,5 +87,31 @@
     "missingTokenErr": "Token mancante. Il link non è corretto.",
     "requestNewLink": "Richiedi un nuovo link",
     "loginInstead": "Oppure clicca qui per fare il login"
+  },
+  "admin": {
+    "panelTitle": "Admin Databank",
+    "casesIndex": "Indice Fascicoli Investigativi",
+    "newCaseBtn": "Crea Nuovo Caso",
+    "editCaseBtn": "Modifica",
+    "deleteCaseBtn": "Elimina",
+    "loading": "Caricamento databank admin...",
+    "confirmDelete": "Sei sicuro di voler eliminare questo caso? L'azione è irreversibile.",
+    "createCaseTitle": "Crea Nuovo Fascicolo",
+    "editCaseTitle": "Modifica Fascicolo",
+    "backBtn": "Torna al Databank",
+    "formTitleLabel": "Titolo del Caso",
+    "formStoryLabel": "Storia",
+    "formHintLabel": "Suggerimento (Opzionale)",
+    "formCorrectLocationLabel": "Luogo Corretto",
+    "formExplanationLocationLabel": "Motivazione Luogo",
+    "formCorrectSuspectLabel": "Sospettato Corretto",
+    "formExplanationSuspectLabel": "Motivazione Sospettato",
+    "formCorrectWeaponLabel": "Arma Corretta (Antipattern)",
+    "formExplanationWeaponLabel": "Motivazione Arma",
+    "formLangLabel": "Lingua",
+    "formSubmitBtn": "Salva Dati nell'Archivio",
+    "formSavingBtn": "Salvataggio...",
+    "formSuccess": "Caso salvato con successo. Ritorno all'indice...",
+    "formError": "Errore durante il salvataggio. Controlla i campi."
   }
 }
