@@ -2,6 +2,22 @@
 
 A gamified training tool for Agile Coaches and Scrum Masters. Investigate anti-patterns, solve cold cases, and master the Scrum framework.
 
+---
+
+### 📸 Screenshots
+
+<p align="center">
+  <img src="./public/docs/screenshot-1.png" width="800" alt="Login & Registration" />
+  <br/><br/>
+  <img src="./public/docs/screenshot-2.png" width="800" alt="Investigation Dashboard" />
+  <br/><br/>
+  <img src="./public/docs/screenshot-4.png" width="800" alt="Active Investigation" />
+  <br/><br/>
+  <img src="./public/docs/screenshot-3.png" width="800" alt="Global Ranking" />
+</p>
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
