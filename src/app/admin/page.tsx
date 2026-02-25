@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Plus, Edit2, Trash2, Search, FileText } from 'lucide-react';
+import { useTranslation } from '@/i18n/LanguageContext';
 
 interface CaseType {
   id: string;
@@ -18,6 +19,7 @@ export default function AdminDashboard() {
   const [teamId, setTeamId] = useState('');
   
   const router = useRouter();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const saved = localStorage.getItem('scrum_team');
@@ -45,7 +47,7 @@ export default function AdminDashboard() {
   };
 
   const deleteCase = async (caseId: string) => {
-    if (!confirm('Sei sicuro di voler eliminare questo caso?')) return;
+    if (!confirm(t('admin', 'confirmDelete'))) return;
     
     try {
       const res = await fetch(`/api/admin/cases/${caseId}`, {
@@ -55,7 +57,7 @@ export default function AdminDashboard() {
       if (res.ok) {
         setCases(cases.filter(c => c.id !== caseId));
       } else {
-        alert('Errore eliminazione caso');
+        alert('Error');
       }
     } catch (e) {
       alert('Network error');
@@ -66,13 +68,13 @@ export default function AdminDashboard() {
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold text-white flex items-center gap-2">
-          <FileText className="text-primary w-6 h-6" /> Archivio Casi
+          <FileText className="text-primary w-6 h-6" /> {t('admin', 'casesIndex')}
         </h1>
         <Link 
           href="/admin/cases/new" 
           className="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-xl text-sm font-semibold shadow-[0_4px_14px_0_rgba(99,102,241,0.39)] flex items-center gap-2 transition-all"
         >
-          <Plus className="w-4 h-4" /> Nuovo Caso
+          <Plus className="w-4 h-4" /> {t('admin', 'newCaseBtn')}
         </Link>
       </div>
 
@@ -81,23 +83,23 @@ export default function AdminDashboard() {
           <table className="w-full text-left text-sm text-gray-300">
             <thead className="text-xs text-gray-400 uppercase bg-black/50 border-b border-white/10">
               <tr>
-                <th className="px-6 py-4 font-semibold">Titolo</th>
-                <th className="px-6 py-4 font-semibold text-center">Lingua</th>
-                <th className="px-6 py-4 font-semibold text-center">Aggiunto Il</th>
-                <th className="px-6 py-4 font-semibold text-right">Azioni</th>
+                <th className="px-6 py-4 font-semibold">Title</th>
+                <th className="px-6 py-4 font-semibold text-center">Lang</th>
+                <th className="px-6 py-4 font-semibold text-center">Date</th>
+                <th className="px-6 py-4 font-semibold text-right">Actions</th>
               </tr>
             </thead>
             <tbody>
               {isLoading ? (
                 <tr>
                   <td colSpan={4} className="px-6 py-10 text-center text-gray-500 animate-pulse">
-                    Caricamento casi...
+                    {t('admin', 'loading')}
                   </td>
                 </tr>
               ) : cases.length === 0 ? (
                 <tr>
                   <td colSpan={4} className="px-6 py-10 text-center text-gray-500">
-                    Nessun caso presente nel database.
+                    Empty Archive
                   </td>
                 </tr>
               ) : (
@@ -117,14 +119,14 @@ export default function AdminDashboard() {
                         <Link 
                           href={`/admin/cases/${c.id}`}
                           className="p-2 text-gray-400 hover:text-white bg-white/5 hover:bg-white/10 rounded-lg transition-colors"
-                          title="Modifica"
+                          title={t('admin', 'editCaseBtn')}
                         >
                           <Edit2 className="w-4 h-4" />
                         </Link>
                         <button 
                           onClick={() => deleteCase(c.id)}
                           className="p-2 text-red-400 hover:text-red-300 bg-red-500/10 hover:bg-red-500/20 rounded-lg transition-colors"
-                          title="Elimina"
+                          title={t('admin', 'deleteCaseBtn')}
                         >
                           <Trash2 className="w-4 h-4" />
                         </button>
