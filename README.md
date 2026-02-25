@@ -2,7 +2,7 @@
 
 A gamified training tool for Agile Coaches and Scrum Masters. Investigate anti-patterns, solve cold cases, and master the Scrum framework.
 
-> **Note**: This project is freely inspired by the brilliant game [Murder in the Sprint](https://murderinthesprint.com/) created by Angelo Sala and Marco D'Andrea. This open-source clone was built to allow the community to customize and expand upon their great idea.
+> **Note**: This project was built as an open-source tribute and recreation of the brilliant game [Murder in the Sprint](https://murderinthesprint.com/) created by Angelo Sala and Marco D'Andrea. This clone was built to allow the community to customize and expand upon their great idea.
 
 ---
 
