@@ -1,0 +1,62 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Team {
+  id                  String               @id @default(uuid())
+  name                String               @unique // nickname
+  email               String?              @unique
+  password            String?
+  isAdmin             Boolean              @default(false)
+  totalScore          Int                  @default(0)
+  createdAt           DateTime             @default(now())
+  updatedAt           DateTime             @updatedAt
+  playSessions        PlaySession[]
+  passwordResetTokens PasswordResetToken[]
+}
+
+model PasswordResetToken {
+  id        String   @id @default(uuid())
+  token     String   @unique
+  expiresAt DateTime
+  teamId    String
+  team      Team     @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+}
+
+model Case {
+  id               String        @id @default(uuid())
+  lang             String        @default("it")
+  title            String
+  story            String
+  hint             String?
+  correctLocation  String
+  explanationLocation String     @default("-")
+  correctSuspect   String
+  explanationSuspect String      @default("-")
+  correctWeapon    String
+  explanationWeapon String       @default("-")
+  createdAt        DateTime      @default(now())
+  playSessions     PlaySession[]
+}
+
+model PlaySession {
+  id               String   @id @default(uuid())
+  teamId           String
+  caseId           String
+  team             Team     @relation(fields: [teamId], references: [id])
+  caseItem         Case     @relation(fields: [caseId], references: [id])
+  isCorrectLocation Boolean  @default(false)
+  isCorrectSuspect  Boolean  @default(false)
+  isCorrectWeapon   Boolean  @default(false)
+  scoreAwarded     Int      @default(0)
+  completedAt      DateTime @default(now())
+}
