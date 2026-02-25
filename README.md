@@ -6,6 +6,8 @@ A gamified training tool for Agile Coaches and Scrum Masters. Investigate anti-p
 
 ### 📸 Screenshots
 
+#### 🎮 Gameplay
+
 <p align="center">
   <img src="./public/docs/screenshot-1.png" width="800" alt="Login & Registration" />
   <br/><br/>
@@ -14,7 +16,11 @@ A gamified training tool for Agile Coaches and Scrum Masters. Investigate anti-p
   <img src="./public/docs/screenshot-4.png" width="800" alt="Active Investigation" />
   <br/><br/>
   <img src="./public/docs/screenshot-3.png" width="800" alt="Global Ranking" />
-  <br/><br/>
+</p>
+
+#### 🔒 Admin Panel
+
+<p align="center">
   <img src="./public/docs/screenshot-5.png" width="800" alt="Admin Databank - Index" />
   <br/><br/>
   <img src="./public/docs/screenshot-6.png" width="800" alt="Admin Databank - Case Editor" />
