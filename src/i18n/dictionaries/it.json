@@ -35,6 +35,8 @@
     "abandonCase": "Abbandona Caso",
     "classified": "Classificato",
     "hintTitle": "Suggerimento:",
+    "showHintBtn": "Rivela Suggerimento",
+    "hideHintBtn": "Nascondi Suggerimento",
     "theLocation": "Il Luogo",
     "theSuspect": "Il Sospettato",
     "theWeapon": "L'Arma (Antipattern)",

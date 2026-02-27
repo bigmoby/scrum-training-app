@@ -35,6 +35,8 @@
     "abandonCase": "Abandon Case",
     "classified": "Classified",
     "hintTitle": "Hint:",
+    "showHintBtn": "Reveal Hint",
+    "hideHintBtn": "Hide Hint",
     "theLocation": "The Location",
     "theSuspect": "The Suspect",
     "theWeapon": "The Weapon (Anti-pattern)",
