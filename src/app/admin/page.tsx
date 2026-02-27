@@ -19,20 +19,21 @@ export default function AdminDashboard() {
   const [teamId, setTeamId] = useState('');
   
   const router = useRouter();
-  const { t } = useTranslation();
+  const { t, lang } = useTranslation();
 
   useEffect(() => {
     const saved = localStorage.getItem('scrum_team');
     if (saved) {
       const team = JSON.parse(saved);
       setTeamId(team.id);
-      fetchCases(team.id);
+      fetchCases(team.id, lang);
     }
-  }, []);
+  }, [lang]);
 
-  const fetchCases = async (id: string) => {
+  const fetchCases = async (id: string, currentLang: string) => {
+    setIsLoading(true);
     try {
-      const res = await fetch('/api/admin/cases', {
+      const res = await fetch(`/api/admin/cases?lang=${currentLang}`, {
         headers: { 'x-team-id': id }
       });
       if (res.ok) {
@@ -98,7 +99,7 @@ export default function AdminDashboard() {
       });
       if (res.ok) {
         alert(t('admin', 'clearSuccess'));
-        fetchCases(teamId);
+        fetchCases(teamId, lang);
       } else {
         alert('Clear failed');
         setIsLoading(false);
@@ -128,7 +129,7 @@ export default function AdminDashboard() {
         });
         if (res.ok) {
           alert(t('admin', 'importSuccess'));
-          fetchCases(teamId);
+          fetchCases(teamId, lang);
         } else {
           alert('Import failed. Check JSON format.');
           setIsLoading(false);

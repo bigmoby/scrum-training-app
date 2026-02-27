@@ -16,12 +16,17 @@ async function checkAdmin(request: Request) {
 }
 
 export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url);
+  const lang = searchParams.get('lang');
+
   if (!(await checkAdmin(request))) {
     return NextResponse.json({ error: 'Accesso negato. Permessi da amministratore richiesti.' }, { status: 403 });
   }
 
   try {
+    const whereClause = lang ? { lang } : {};
     const cases = await prisma.case.findMany({
+      where: whereClause,
       orderBy: { createdAt: 'desc' },
     });
     return NextResponse.json({ cases });
