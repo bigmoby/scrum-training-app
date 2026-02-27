@@ -26,14 +26,14 @@ export default function AdminDashboard() {
     if (saved) {
       const team = JSON.parse(saved);
       setTeamId(team.id);
-      fetchCases(team.id, lang);
+      fetchCases(team.id);
     }
-  }, [lang]);
+  }, []);
 
-  const fetchCases = async (id: string, currentLang: string) => {
+  const fetchCases = async (id: string) => {
     setIsLoading(true);
     try {
-      const res = await fetch(`/api/admin/cases?lang=${currentLang}`, {
+      const res = await fetch('/api/admin/cases', {
         headers: { 'x-team-id': id }
       });
       if (res.ok) {
@@ -99,7 +99,7 @@ export default function AdminDashboard() {
       });
       if (res.ok) {
         alert(t('admin', 'clearSuccess'));
-        fetchCases(teamId, lang);
+        fetchCases(teamId);
       } else {
         alert('Clear failed');
         setIsLoading(false);
@@ -129,7 +129,7 @@ export default function AdminDashboard() {
         });
         if (res.ok) {
           alert(t('admin', 'importSuccess'));
-          fetchCases(teamId, lang);
+          fetchCases(teamId);
         } else {
           alert('Import failed. Check JSON format.');
           setIsLoading(false);
