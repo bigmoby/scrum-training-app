@@ -152,14 +152,12 @@ export default function AdminDashboard() {
           </h1>
           {cases.length > 0 && (
             <div className="flex gap-2">
-              <div className="flex flex-col items-center justify-center bg-[#07241A] border border-[#103D30] rounded-lg px-3 py-1.5 min-w-[3rem]">
-                <span className="text-[10px] font-bold text-[#2DD4BF] uppercase tracking-wider leading-none mb-0.5">IT</span>
-                <span className="text-sm font-semibold text-[#2DD4BF] leading-none">{cases.filter(c => c.lang === 'it').length}</span>
-              </div>
-              <div className="flex flex-col items-center justify-center bg-[#102347] border border-[#1E3A70] rounded-lg px-3 py-1.5 min-w-[3rem]">
-                <span className="text-[10px] font-bold text-[#60A5FA] uppercase tracking-wider leading-none mb-0.5">EN</span>
-                <span className="text-sm font-semibold text-[#60A5FA] leading-none">{cases.filter(c => c.lang === 'en').length}</span>
-              </div>
+              <span className="bg-[#07241A]/50 border border-[#103D30] text-[#2DD4BF] text-xs px-2.5 py-1 rounded-full font-medium flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#2DD4BF]"></span> IT: {cases.filter(c => c.lang === 'it').length}
+              </span>
+              <span className="bg-[#102347]/50 border border-[#1E3A70] text-[#60A5FA] text-xs px-2.5 py-1 rounded-full font-medium flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#60A5FA]"></span> EN: {cases.filter(c => c.lang === 'en').length}
+              </span>
             </div>
           )}
         </div>
