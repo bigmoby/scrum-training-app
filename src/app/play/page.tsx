@@ -195,9 +195,18 @@ export default function PlayGame() {
             className="space-y-8"
           >
             {/* Case File */}
-            <div className="glass-panel p-8 rounded-3xl relative overflow-hidden border-l-4 border-l-primary">
-              <h1 className="text-3xl font-bold text-white mb-4">{caseData?.title}</h1>
-              <p className="text-gray-300 text-lg leading-relaxed mb-6 bg-black/20 p-6 rounded-2xl border border-white/5">
+            <div className="glass-panel p-8 sm:p-12 rounded-3xl relative overflow-hidden border-l-4 border-l-primary">
+              
+              {/* Decorative "Cold Case" Stamp */}
+              <div 
+                className="absolute top-10 -right-10 sm:top-12 sm:right-6 transform rotate-12 uppercase font-mono text-5xl sm:text-7xl font-black text-red-600/20 border-8 border-red-600/20 px-6 py-2 rounded-2xl pointer-events-none select-none z-0 tracking-wider mix-blend-lighten"
+                style={{ filter: 'drop-shadow(0 0 10px rgba(220,38,38,0.1))' }}
+              >
+                COLD CASE
+              </div>
+
+              <h1 className="text-3xl font-bold text-white mb-6 relative z-10">{caseData?.title}</h1>
+              <p className="text-gray-300 text-lg leading-relaxed mb-6 bg-black/30 p-6 rounded-2xl border border-white/5 relative z-10 shadow-inner">
                 {caseData?.story}
               </p>
               {caseData?.hint && (
