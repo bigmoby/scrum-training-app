@@ -112,6 +112,13 @@
     "formSubmitBtn": "Save Data to Archive",
     "formSavingBtn": "Saving...",
     "formSuccess": "Case saved successfully. Returning to indexing...",
-    "formError": "Error saving the case. Check the fields."
+    "formError": "Error saving the case. Check the fields.",
+    "exportBtn": "Export JSON",
+    "importBtn": "Import JSON",
+    "clearBtn": "Clear DB",
+    "clearConfirm": "WARNING: Are you sure you want to delete ALL cases from the database? This action cannot be undone.",
+    "importSuccess": "Cases imported successfully!",
+    "clearSuccess": "Database cleared successfully.",
+    "processing": "Processing..."
   }
 }
