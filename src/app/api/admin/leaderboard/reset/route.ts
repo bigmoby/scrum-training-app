@@ -31,6 +31,12 @@ export async function DELETE(request: Request) {
       }
     });
 
+    // 3. Reset the score of the remaining administrator teams to 0
+    await prisma.team.updateMany({
+      where: { isAdmin: true },
+      data: { totalScore: 0 }
+    });
+
     return NextResponse.json({ success: true, message: 'Classifica e squadre resettate con successo' });
   } catch (error: any) {
     console.error('Reset error:', error);
