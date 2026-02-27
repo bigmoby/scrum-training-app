@@ -15,7 +15,7 @@ A gamified training tool for Agile Coaches and Scrum Masters. Investigate anti-p
   <br/><br/>
   <img src="./public/docs/screenshot-2.png" width="800" alt="Investigation Dashboard" />
   <br/><br/>
-  <img src="./public/docs/screenshot-7.png" width="800" alt="Case Investigation" />
+  <img src="./public/docs/screenshot-4.png" width="800" alt="Case Investigation" />
   <br/><br/>
   <img src="./public/docs/screenshot-8.png" width="800" alt="Investigation Results" />
   <br/><br/>
