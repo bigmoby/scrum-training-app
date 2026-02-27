@@ -71,6 +71,15 @@ export default function PlayGame() {
     const parsedTeam = JSON.parse(savedTeam);
     setTeam(parsedTeam);
 
+    // Reset state before fetching (important if lang changes)
+    setIsLoading(true);
+    setResults(null);
+    setLocation('');
+    setSuspect('');
+    setWeapon('');
+    setError('');
+    setCaseData(null);
+
     async function fetchCase() {
       try {
         const res = await fetch(`/api/cases/random?teamId=${parsedTeam.id}&lang=${lang}`);
@@ -91,7 +100,7 @@ export default function PlayGame() {
       }
     }
     fetchCase();
-  }, [router]);
+  }, [router, lang]);
 
   const handleAccuse = async () => {
     if (!location || !suspect || !weapon) {
