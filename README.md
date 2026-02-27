@@ -38,8 +38,9 @@ If you want to run your own instance of the game, follow these steps to get a lo
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) (v18 or higher recommended)
-- Git
+- **Node.js** (v18.17 or higher)
+- **npm** (Node Package Manager, usually installed with Node.js)
+- **Git**
 
 ### 1. Clone & Install
 
