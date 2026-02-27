@@ -184,29 +184,29 @@ export default function AdminDashboard() {
           )}
         </div>
         
-        <div className="flex items-center gap-3 w-full sm:w-auto overflow-x-auto pb-2 sm:pb-0">
-          <button onClick={exportCases} className="bg-white/10 hover:bg-white/20 text-white px-4 py-3 sm:py-2 rounded-xl text-sm font-semibold flex items-center gap-2 transition-all" title={t('admin', 'exportBtn')}>
-            <Download className="w-4 h-4" /> <span className="hidden sm:inline">{t('admin', 'exportBtn')}</span>
+        <div className="flex items-center gap-2 w-full sm:w-auto overflow-x-auto pb-2 sm:pb-0">
+          <button onClick={exportCases} className="bg-white/10 hover:bg-white/20 text-white px-3 py-2 sm:py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all" title={t('admin', 'exportBtn')}>
+            <Download className="w-3.5 h-3.5" /> <span className="hidden sm:inline">{t('admin', 'exportBtn')}</span>
           </button>
 
-          <label className="bg-white/10 hover:bg-white/20 text-white px-4 py-3 sm:py-2 rounded-xl text-sm font-semibold flex items-center gap-2 transition-all cursor-pointer" title={t('admin', 'importBtn')}>
-            <Upload className="w-4 h-4" /> <span className="hidden sm:inline">{t('admin', 'importBtn')}</span>
+          <label className="bg-white/10 hover:bg-white/20 text-white px-3 py-2 sm:py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all cursor-pointer" title={t('admin', 'importBtn')}>
+            <Upload className="w-3.5 h-3.5" /> <span className="hidden sm:inline">{t('admin', 'importBtn')}</span>
             <input type="file" accept=".json" className="hidden" onChange={importCases} />
           </label>
 
-          <button onClick={resetLeaderboard} className="bg-orange-500/20 hover:bg-orange-500/40 text-orange-200 hover:text-white px-4 py-3 sm:py-2 rounded-xl text-sm font-semibold flex items-center gap-2 transition-all" title={t('admin', 'resetLeaderboardBtn')}>
-            <AlertTriangle className="w-4 h-4" /> <span className="hidden sm:inline">{t('admin', 'resetLeaderboardBtn')}</span>
+          <button onClick={resetLeaderboard} className="bg-orange-500/20 hover:bg-orange-500/40 text-orange-200 hover:text-white px-3 py-2 sm:py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all" title={t('admin', 'resetLeaderboardBtn')}>
+            <AlertTriangle className="w-3.5 h-3.5" /> <span className="hidden sm:inline">{t('admin', 'resetLeaderboardBtn')}</span>
           </button>
 
-          <button onClick={clearDatabase} className="bg-red-500/20 hover:bg-red-500/40 text-red-200 hover:text-white px-4 py-3 sm:py-2 rounded-xl text-sm font-semibold flex items-center gap-2 transition-all" title={t('admin', 'clearBtn')}>
-            <AlertTriangle className="w-4 h-4" /> <span className="hidden sm:inline">{t('admin', 'clearBtn')}</span>
+          <button onClick={clearDatabase} className="bg-red-500/20 hover:bg-red-500/40 text-red-200 hover:text-white px-3 py-2 sm:py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all" title={t('admin', 'clearBtn')}>
+            <AlertTriangle className="w-3.5 h-3.5" /> <span className="hidden sm:inline">{t('admin', 'clearBtn')}</span>
           </button>
 
           <Link 
             href="/admin/cases/new" 
-            className="bg-primary hover:bg-primary/90 text-white px-4 py-3 sm:py-2 rounded-xl text-sm font-semibold shadow-[0_4px_14px_0_rgba(99,102,241,0.39)] flex items-center gap-2 transition-all sm:ml-4"
+            className="bg-primary hover:bg-primary/90 text-white px-3 py-2 sm:py-1.5 rounded-lg text-xs font-semibold shadow-[0_4px_14px_0_rgba(99,102,241,0.39)] flex items-center gap-1.5 transition-all sm:ml-2"
           >
-            <Plus className="w-4 h-4" /> <span className="hidden sm:inline">{t('admin', 'newCaseBtn')}</span>
+            <Plus className="w-3.5 h-3.5" /> <span className="hidden sm:inline">{t('admin', 'newCaseBtn')}</span>
           </Link>
         </div>
       </div>
