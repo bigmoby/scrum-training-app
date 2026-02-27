@@ -145,18 +145,26 @@ export default function AdminDashboard() {
 
   return (
     <div className="space-y-6">
-      <div className="flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-white flex items-center gap-2">
-          <FileText className="text-primary w-6 h-6" /> {t('admin', 'casesIndex')}
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <div className="flex items-center gap-4">
+          <h1 className="text-2xl font-bold text-white flex items-center gap-2">
+            <FileText className="text-primary w-6 h-6" /> {t('admin', 'casesIndex')}
+          </h1>
           {cases.length > 0 && (
-            <div className="flex gap-2 ml-3">
-              <span className="bg-green-500/20 text-green-400 text-xs px-2.5 py-1 rounded-md font-bold">IT: {cases.filter(c => c.lang === 'it').length}</span>
-              <span className="bg-blue-500/20 text-blue-400 text-xs px-2.5 py-1 rounded-md font-bold">EN: {cases.filter(c => c.lang === 'en').length}</span>
+            <div className="flex gap-2">
+              <div className="flex flex-col items-center justify-center bg-[#07241A] border border-[#103D30] rounded-lg px-3 py-1.5 min-w-[3rem]">
+                <span className="text-[10px] font-bold text-[#2DD4BF] uppercase tracking-wider leading-none mb-0.5">IT</span>
+                <span className="text-sm font-semibold text-[#2DD4BF] leading-none">{cases.filter(c => c.lang === 'it').length}</span>
+              </div>
+              <div className="flex flex-col items-center justify-center bg-[#102347] border border-[#1E3A70] rounded-lg px-3 py-1.5 min-w-[3rem]">
+                <span className="text-[10px] font-bold text-[#60A5FA] uppercase tracking-wider leading-none mb-0.5">EN</span>
+                <span className="text-sm font-semibold text-[#60A5FA] leading-none">{cases.filter(c => c.lang === 'en').length}</span>
+              </div>
             </div>
           )}
-        </h1>
+        </div>
         
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 w-full sm:w-auto overflow-x-auto pb-2 sm:pb-0">
           <button onClick={exportCases} className="bg-white/10 hover:bg-white/20 text-white px-4 py-3 sm:py-2 rounded-xl text-sm font-semibold flex items-center gap-2 transition-all" title={t('admin', 'exportBtn')}>
             <Download className="w-4 h-4" /> <span className="hidden sm:inline">{t('admin', 'exportBtn')}</span>
           </button>
