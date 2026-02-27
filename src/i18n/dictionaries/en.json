@@ -119,6 +119,9 @@
     "clearConfirm": "WARNING: Are you sure you want to delete ALL cases from the database? This action cannot be undone.",
     "importSuccess": "Cases imported successfully!",
     "clearSuccess": "Database cleared successfully.",
-    "processing": "Processing..."
+    "processing": "Processing...",
+    "resetLeaderboardBtn": "Reset Leaderboard",
+    "resetLeaderboardConfirm": "WARNING: This will permanently delete all scores and play history from EVERY team. Do you want to proceed?",
+    "resetLeaderboardSuccess": "Leaderboard and scores reset to zero!"
   }
 }

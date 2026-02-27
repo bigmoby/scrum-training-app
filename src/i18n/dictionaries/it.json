@@ -119,6 +119,9 @@
     "clearConfirm": "ATTENZIONE: Sei sicuro di voler eliminare TUTTI i casi dal database? L'operazione è irreversibile.",
     "importSuccess": "Casi importati con successo!",
     "clearSuccess": "Database svuotato correttamente.",
-    "processing": "Elaborazione in corso..."
+    "processing": "Elaborazione in corso...",
+    "resetLeaderboardBtn": "Resetta Classifica",
+    "resetLeaderboardConfirm": "ATTENZIONE: Verranno eliminati permanentemente tutti i punteggi e la cronologia delle giocate di TUTTE le squadre. Vuoi procedere?",
+    "resetLeaderboardSuccess": "Classifica e Punteggi ripartiti da zero!"
   }
 }
