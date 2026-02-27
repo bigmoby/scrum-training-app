@@ -121,7 +121,7 @@
     "clearSuccess": "Database cleared successfully.",
     "processing": "Processing...",
     "resetLeaderboardBtn": "Reset Leaderboard",
-    "resetLeaderboardConfirm": "WARNING: This will permanently delete all scores and play history from EVERY team. Do you want to proceed?",
+    "resetLeaderboardConfirm": "WARNING: This will permanently delete ALL REGISTERED TEAMS, their passwords, and play history. Do you want to proceed?",
     "resetLeaderboardSuccess": "Leaderboard and scores reset to zero!"
   }
 }
