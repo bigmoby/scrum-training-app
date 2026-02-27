@@ -120,6 +120,14 @@ export default function AdminDashboard() {
       });
       if (res.ok) {
         alert(t('admin', 'resetLeaderboardSuccess'));
+        
+        // Update local storage so the admin's own dashboard reflects the reset immediately
+        const savedTeam = localStorage.getItem('scrum_team');
+        if (savedTeam) {
+          const team = JSON.parse(savedTeam);
+          team.totalScore = 0;
+          localStorage.setItem('scrum_team', JSON.stringify(team));
+        }
       } else {
         alert('Reset failed');
       }
