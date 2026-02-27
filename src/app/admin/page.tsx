@@ -148,6 +148,12 @@ export default function AdminDashboard() {
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold text-white flex items-center gap-2">
           <FileText className="text-primary w-6 h-6" /> {t('admin', 'casesIndex')}
+          {cases.length > 0 && (
+            <div className="flex gap-2 ml-3">
+              <span className="bg-green-500/20 text-green-400 text-xs px-2.5 py-1 rounded-md font-bold">IT: {cases.filter(c => c.lang === 'it').length}</span>
+              <span className="bg-blue-500/20 text-blue-400 text-xs px-2.5 py-1 rounded-md font-bold">EN: {cases.filter(c => c.lang === 'en').length}</span>
+            </div>
+          )}
         </h1>
         
         <div className="flex items-center gap-3">
