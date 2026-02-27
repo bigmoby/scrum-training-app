@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, Target, UserX, Wrench, CheckCircle2, XCircle } from 'lucide-react';
+import { ArrowLeft, Target, UserX, Wrench, CheckCircle2, XCircle, Eye, EyeOff } from 'lucide-react';
 import Link from 'next/link';
 import { useTranslation } from '@/i18n/LanguageContext';
 
@@ -22,6 +22,7 @@ export default function PlayGame() {
   const [isLoading, setIsLoading] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
+  const [showHint, setShowHint] = useState(false);
 
   // Selections
   const [location, setLocation] = useState('');
@@ -78,6 +79,7 @@ export default function PlayGame() {
     setSuspect('');
     setWeapon('');
     setError('');
+    setShowHint(false);
     setCaseData(null);
 
     async function fetchCase() {
@@ -200,9 +202,31 @@ export default function PlayGame() {
                 {caseData?.story}
               </p>
               {caseData?.hint && (
-                <div className="bg-primary/10 border border-primary/20 p-4 rounded-xl text-primary-foreground text-sm flex gap-3 items-start">
-                  <span className="font-bold text-primary">{t('play', 'hintTitle')}</span>
-                  <span className="opacity-90">{caseData.hint}</span>
+                <div className="mt-6 border-t border-white/5 pt-6">
+                  {!showHint ? (
+                    <button 
+                      onClick={() => setShowHint(true)}
+                      className="flex items-center gap-2 text-sm font-medium text-primary bg-primary/10 hover:bg-primary/20 px-4 py-2 rounded-xl transition-all border border-primary/20"
+                    >
+                      <Eye className="w-4 h-4" /> {t('play', 'showHintBtn')}
+                    </button>
+                  ) : (
+                    <motion.div 
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      className="bg-primary/10 border border-primary/20 p-4 rounded-xl text-primary-foreground text-sm flex flex-col sm:flex-row gap-3 items-start relative pr-12"
+                    >
+                      <button 
+                        onClick={() => setShowHint(false)}
+                        className="absolute top-3 right-3 text-primary/60 hover:text-primary transition-colors"
+                        title={t('play', 'hideHintBtn')}
+                      >
+                        <EyeOff className="w-4 h-4" />
+                      </button>
+                      <span className="font-bold text-primary mt-0.5 whitespace-nowrap">{t('play', 'hintTitle')}</span>
+                      <span className="opacity-90 leading-relaxed">{caseData.hint}</span>
+                    </motion.div>
+                  )}
                 </div>
               )}
             </div>
