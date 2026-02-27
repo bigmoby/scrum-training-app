@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { Plus, Edit2, Trash2, Search, FileText } from 'lucide-react';
+import { Plus, Edit2, Trash2, Search, FileText, Download, Upload, AlertTriangle } from 'lucide-react';
 import { useTranslation } from '@/i18n/LanguageContext';
 
 interface CaseType {
@@ -64,18 +64,112 @@ export default function AdminDashboard() {
     }
   };
 
+  const exportCases = async () => {
+    try {
+      const res = await fetch('/api/admin/cases/export', {
+        headers: { 'x-team-id': teamId }
+      });
+      if (res.ok) {
+        const data = await res.json();
+        const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'scrum-cases-export.json';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      } else {
+        alert('Export failed');
+      }
+    } catch (e) {
+      alert('Network error during export');
+    }
+  };
+
+  const clearDatabase = async () => {
+    if (!confirm(t('admin', 'clearConfirm'))) return;
+    setIsLoading(true);
+    try {
+      const res = await fetch('/api/admin/cases/clear', {
+        method: 'DELETE',
+        headers: { 'x-team-id': teamId }
+      });
+      if (res.ok) {
+        alert(t('admin', 'clearSuccess'));
+        fetchCases(teamId);
+      } else {
+        alert('Clear failed');
+        setIsLoading(false);
+      }
+    } catch (e) {
+      alert('Network error');
+      setIsLoading(false);
+    }
+  };
+
+  const importCases = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setIsLoading(true);
+    const reader = new FileReader();
+    reader.onload = async (event) => {
+      try {
+        const json = JSON.parse(event.target?.result as string);
+        const res = await fetch('/api/admin/cases/import', {
+          method: 'POST',
+          headers: { 
+            'Content-Type': 'application/json',
+            'x-team-id': teamId 
+          },
+          body: JSON.stringify(json)
+        });
+        if (res.ok) {
+          alert(t('admin', 'importSuccess'));
+          fetchCases(teamId);
+        } else {
+          alert('Import failed. Check JSON format.');
+          setIsLoading(false);
+        }
+      } catch (err) {
+        alert('Invalid JSON file');
+        setIsLoading(false);
+      }
+    };
+    reader.readAsText(file);
+    e.target.value = ''; // Reset file input
+  };
+
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold text-white flex items-center gap-2">
           <FileText className="text-primary w-6 h-6" /> {t('admin', 'casesIndex')}
         </h1>
-        <Link 
-          href="/admin/cases/new" 
-          className="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-xl text-sm font-semibold shadow-[0_4px_14px_0_rgba(99,102,241,0.39)] flex items-center gap-2 transition-all"
-        >
-          <Plus className="w-4 h-4" /> {t('admin', 'newCaseBtn')}
-        </Link>
+        
+        <div className="flex items-center gap-3">
+          <button onClick={exportCases} className="bg-white/10 hover:bg-white/20 text-white px-4 py-3 sm:py-2 rounded-xl text-sm font-semibold flex items-center gap-2 transition-all" title={t('admin', 'exportBtn')}>
+            <Download className="w-4 h-4" /> <span className="hidden sm:inline">{t('admin', 'exportBtn')}</span>
+          </button>
+
+          <label className="bg-white/10 hover:bg-white/20 text-white px-4 py-3 sm:py-2 rounded-xl text-sm font-semibold flex items-center gap-2 transition-all cursor-pointer" title={t('admin', 'importBtn')}>
+            <Upload className="w-4 h-4" /> <span className="hidden sm:inline">{t('admin', 'importBtn')}</span>
+            <input type="file" accept=".json" className="hidden" onChange={importCases} />
+          </label>
+
+          <button onClick={clearDatabase} className="bg-red-500/20 hover:bg-red-500/40 text-red-200 hover:text-white px-4 py-3 sm:py-2 rounded-xl text-sm font-semibold flex items-center gap-2 transition-all" title={t('admin', 'clearBtn')}>
+            <AlertTriangle className="w-4 h-4" /> <span className="hidden sm:inline">{t('admin', 'clearBtn')}</span>
+          </button>
+
+          <Link 
+            href="/admin/cases/new" 
+            className="bg-primary hover:bg-primary/90 text-white px-4 py-3 sm:py-2 rounded-xl text-sm font-semibold shadow-[0_4px_14px_0_rgba(99,102,241,0.39)] flex items-center gap-2 transition-all sm:ml-4"
+          >
+            <Plus className="w-4 h-4" /> <span className="hidden sm:inline">{t('admin', 'newCaseBtn')}</span>
+          </Link>
+        </div>
       </div>
 
       <div className="bg-black/40 border border-white/10 rounded-2xl overflow-hidden glass-panel">

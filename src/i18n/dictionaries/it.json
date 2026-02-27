@@ -112,6 +112,13 @@
     "formSubmitBtn": "Salva Dati nell'Archivio",
     "formSavingBtn": "Salvataggio...",
     "formSuccess": "Caso salvato con successo. Ritorno all'indice...",
-    "formError": "Errore durante il salvataggio. Controlla i campi."
+    "formError": "Errore durante il salvataggio. Controlla i campi.",
+    "exportBtn": "Esporta JSON",
+    "importBtn": "Importa JSON",
+    "clearBtn": "Svuota DB",
+    "clearConfirm": "ATTENZIONE: Sei sicuro di voler eliminare TUTTI i casi dal database? L'operazione è irreversibile.",
+    "importSuccess": "Casi importati con successo!",
+    "clearSuccess": "Database svuotato correttamente.",
+    "processing": "Elaborazione in corso..."
   }
 }
