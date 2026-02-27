@@ -151,13 +151,15 @@ export default function AdminDashboard() {
             <FileText className="text-primary w-6 h-6" /> {t('admin', 'casesIndex')}
           </h1>
           {cases.length > 0 && (
-            <div className="flex gap-2">
-              <span className="bg-[#07241A]/50 border border-[#103D30] text-[#2DD4BF] text-xs px-2.5 py-1 rounded-full font-medium flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#2DD4BF]"></span> IT: {cases.filter(c => c.lang === 'it').length}
-              </span>
-              <span className="bg-[#102347]/50 border border-[#1E3A70] text-[#60A5FA] text-xs px-2.5 py-1 rounded-full font-medium flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#60A5FA]"></span> EN: {cases.filter(c => c.lang === 'en').length}
-              </span>
+            <div className="hidden sm:flex items-center bg-[#0F172A]/80 border border-[#1E293B] shadow-inner rounded-xl px-1 py-1 h-9">
+              <div className="flex items-center px-3 gap-2 border-r border-[#1E293B]">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.5)]"></span>
+                <span className="text-xs font-semibold text-emerald-400">IT <span className="text-white/80 ml-1">{cases.filter(c => c.lang === 'it').length}</span></span>
+              </div>
+              <div className="flex items-center px-3 gap-2">
+                <span className="w-2 h-2 rounded-full bg-blue-400 shadow-[0_0_8px_rgba(96,165,250,0.5)]"></span>
+                <span className="text-xs font-semibold text-blue-400">EN <span className="text-white/80 ml-1">{cases.filter(c => c.lang === 'en').length}</span></span>
+              </div>
             </div>
           )}
         </div>
