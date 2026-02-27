@@ -121,7 +121,7 @@
     "clearSuccess": "Database svuotato correttamente.",
     "processing": "Elaborazione in corso...",
     "resetLeaderboardBtn": "Resetta Classifica",
-    "resetLeaderboardConfirm": "ATTENZIONE: Verranno eliminati permanentemente tutti i punteggi e la cronologia delle giocate di TUTTE le squadre. Vuoi procedere?",
+    "resetLeaderboardConfirm": "ATTENZIONE: Verranno eliminati permanentemente TUTTE LE SQUADRE registrate, le loro password e la cronologia delle giocate. Vuoi procedere?",
     "resetLeaderboardSuccess": "Classifica e Punteggi ripartiti da zero!"
   }
 }
