@@ -32,30 +32,49 @@ A gamified training tool for Agile Coaches and Scrum Masters. Investigate anti-p
 
 ---
 
-## Getting Started
+## 🚀 Running Locally
 
-First, install the dependencies if you haven't already:
+If you want to run your own instance of the game, follow these steps to get a local development environment up and running.
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- Git
+
+### 1. Clone & Install
+
+Clone the repository and install the dependencies:
 
 ```bash
+git clone https://github.com/your-username/scrum-game.git
+cd scrum-game
 npm install
 ```
 
-Then, generate the Prisma client and seed the database with the investigation cases:
+### 2. Database Setup
+
+This project uses SQLite for zero-configuration local development. Initialize the Prisma database:
 
 ```bash
+# Generate the Prisma Client
 npx prisma generate
+
+# Create the database and push the schema
+npx prisma db push
+
+# (Optional) Seed the database with the initial 20 Cases and Admin user
 npx prisma db seed
 ```
 
-Finally, run the development server:
+### 3. Start Development Server
+
+Start the Next.js local server:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to start playing!
 
 ## 🛡️ Admin Panel
 
