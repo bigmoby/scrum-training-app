@@ -17,8 +17,21 @@ export default function Dashboard() {
     if (!savedTeam) {
       router.push('/');
     } else {
-      setTeam(JSON.parse(savedTeam));
-      // Optionally fetch latest score from API
+      const parsedTeam = JSON.parse(savedTeam);
+      setTeam(parsedTeam);
+      
+      // Fetch the latest absolute truth from DB to fix stale cache after a reset
+      fetch('/api/teams/me', {
+        headers: { 'x-team-id': parsedTeam.id }
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (data.team) {
+          setTeam(data.team);
+          localStorage.setItem('scrum_team', JSON.stringify(data.team));
+        }
+      })
+      .catch(err => console.error("Failed to sync latest score:", err));
     }
   }, [router]);
 
