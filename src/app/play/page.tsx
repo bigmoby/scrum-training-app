@@ -196,7 +196,6 @@ export default function PlayGame() {
           >
             {/* Case File */}
             <div className="glass-panel p-8 rounded-3xl relative overflow-hidden border-l-4 border-l-primary">
-              <span className="absolute top-4 right-6 text-xs font-mono text-primary/60 tracking-widest uppercase">{t('play', 'classified')}</span>
               <h1 className="text-3xl font-bold text-white mb-4">{caseData?.title}</h1>
               <p className="text-gray-300 text-lg leading-relaxed mb-6 bg-black/20 p-6 rounded-2xl border border-white/5">
                 {caseData?.story}
