@@ -1,5 +1,12 @@
 # Scrum Training App
 
+[![GitHub Release][releases-shield]][releases]
+![Project Stage][project-stage-shield]
+[![License][license-shield]](LICENSE.md)
+
+![Maintenance][maintenance-shield]
+[![GitHub Activity][commits-shield]][commits]
+
 A gamified training tool for Agile Coaches and Scrum Masters. Investigate anti-patterns, solve cold cases, and master the Scrum framework.
 
 > **Note**: This project was built as an open-source tribute and recreation of the brilliant game [Murder in the Sprint](https://murderinthesprint.com/) created by Angelo Sala and Marco D'Andrea. This clone was built to allow the community to customize and expand upon their great idea.
@@ -130,3 +137,44 @@ If you want to wipe everything and restore only the game Cases and the Admin Tea
 2. Run the command: `npx prisma migrate reset`
 3. Confirm with `y` (Yes).
 4. This command will drop the entire database, recreate it empty, and automatically run the `seed.ts` file, repopulating the initial setup.
+
+
+## Contributing
+
+This is an active open-source project. We are always open to people who want to use the code or contribute to it.
+
+We have set up a separate document containing our [contribution guidelines](CONTRIBUTING.md).
+
+Thank you for being involved! :heart_eyes:
+
+## Sponsor
+
+Please, if You want support this kind of projects:
+
+<a href="https://www.buymeacoffee.com/bigmoby" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+
+Many Thanks,
+
+Fabio Mauro
+
+## Authors & contributors
+
+Fabio Mauro Bigmoby
+
+## License
+
+Licensed under the [Apache License Version 2.0](LICENSE.md)
+
+
+
+[original_project]: https://github.com/scrum-training-app
+[contributors]: https://github.com/bigmoby/scrum-training-app/graphs/contributors
+[aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
+[amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
+[commits]: https://github.com/bigmoby/scrum-training-app/commits/main
+[issue]: https://img.shields.io/github/issues/bigmoby/scrum-training-app.svg
+[license-shield]: https://img.shields.io/github/license/bigmoby/scrum-training-app.svg
+[maintenance-shield]: https://img.shields.io/maintenance/yes/2026.svg
+[project-stage-shield]: https://img.shields.io/badge/project%20stage-production%20ready-brightgreen.svg
+[releases]: https://github.com/bigmoby/scrum-training-app/releases
+[repository]: https://github.com/bigmoby/scrum-training-app
