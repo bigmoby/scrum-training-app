@@ -156,9 +156,11 @@ Many Thanks,
 
 Fabio Mauro
 
-## Authors & contributors
+## Author
 
-Fabio Mauro Bigmoby
+Fabio Mauro  
+Agile Coach & Software Engineer  
+GitHub: https://github.com/bigmoby
 
 ## License
 
