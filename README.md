@@ -1,6 +1,5 @@
 # Scrum Training App
 
-[![GitHub Release][releases-shield]][releases]
 ![Project Stage][project-stage-shield]
 [![License][license-shield]](LICENSE.md)
 
@@ -172,6 +171,7 @@ Licensed under the [Apache License Version 2.0](LICENSE.md)
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 [commits]: https://github.com/bigmoby/scrum-training-app/commits/main
+[commits-shield]: https://img.shields.io/github/commit-activity/y/scrum-training-app/scrum-training-app.svg
 [issue]: https://img.shields.io/github/issues/bigmoby/scrum-training-app.svg
 [license-shield]: https://img.shields.io/github/license/bigmoby/scrum-training-app.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2026.svg
