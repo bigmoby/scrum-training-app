@@ -158,7 +158,7 @@ Fabio Mauro
 
 ## Author
 
-Fabio Mauro  
+Fabio Mauro (@bigmoby)
 Agile Coach & Software Engineer  
 GitHub: https://github.com/bigmoby
 
