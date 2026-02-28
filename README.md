@@ -148,19 +148,16 @@ Thank you for being involved! :heart_eyes:
 
 ## Sponsor
 
-Please, if You want support this kind of projects:
+If you find this project useful and want to support its evolution:
 
 <a href="https://www.buymeacoffee.com/bigmoby" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
-Many Thanks,
 
-Fabio Mauro
+## 👤 Maintainer
 
-## Author
-
-Fabio Mauro (@bigmoby)
+Fabio Mauro  
 Agile Coach & Software Engineer  
-GitHub: https://github.com/bigmoby
+GitHub: https://github.com/bigmoby 
 
 ## License
 
