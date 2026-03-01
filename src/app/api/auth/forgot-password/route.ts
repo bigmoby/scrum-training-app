@@ -55,9 +55,9 @@ export async function POST(request: Request) {
       const resetUrl = `${baseUrl}/reset-password?token=${resetToken}`;
 
       const info = await transporter.sendMail({
-        from: '"Scrum Cluedo" <noreply@scrumcluedo.local>',
+        from: '"Scrum Training App" <noreply@scrumtrainingapp.local>',
         to: email.trim(),
-        subject: "Recupero Password - Scrum Cluedo",
+        subject: "Recupero Password - Scrum Training App",
         text: `Ciao ${team.name},\n\nHai richiesto il ripristino della password.\nClicca il link seguente per scegliere una nuova password:\n\n${resetUrl}\n\nIl link scadrà tra un'ora. Se non hai richiesto il reset, ignora questa email.`,
         html: `<p>Ciao <b>${team.name}</b>,</p><p>Hai richiesto il ripristino della password.</p><p><a href="${resetUrl}">Clicca qui per scegliere una nuova password</a></p><p>Il link scadrà tra un'ora. Se non hai richiesto il reset, ignora questa email.</p>`,
       });

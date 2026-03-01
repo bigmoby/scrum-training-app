@@ -65,11 +65,11 @@ export async function POST(request: Request) {
       });
 
       const info = await transporter.sendMail({
-        from: '"Scrum Cluedo" <noreply@scrumcluedo.local>',
+        from: '"Scrum Training App" <noreply@scrumtrainingapp.local>',
         to: email.trim(),
-        subject: "Benvenuto in Scrum Cluedo!",
-        text: `Ciao ${nickname.trim()},\n\nLa tua squadra è stata registrata con successo su Scrum Cluedo!\n\nHai effettuato l'accesso con l'indirizzo email: ${email.trim()}\n\nPer motivi di sicurezza, non includiamo la tua password in questa email.\nSe dovessi dimenticarla, potrai sempre utilizzare la funzione "Hai dimenticato la password?" nella pagina di login.\n\nPreparati a investigare sui peggiori anti-pattern Scrum!`,
-        html: `<p>Ciao <b>${nickname.trim()}</b>,</p><p>La tua squadra è stata registrata con successo su Scrum Cluedo!</p><p>Hai effettuato l'accesso con l'indirizzo email: <b>${email.trim()}</b></p><br><p><i>Per motivi di sicurezza, non includiamo la tua password in questa email.</i><br>Se dovessi dimenticarla, potrai sempre utilizzare la funzione "Hai dimenticato la password?" nella pagina di login.</p><br><p>Preparati a investigare sui peggiori anti-pattern Scrum!</p>`,
+        subject: "Benvenuto in Scrum Training App!",
+        text: `Ciao ${nickname.trim()},\n\nLa tua squadra è stata registrata con successo su Scrum Training App!\n\nHai effettuato l'accesso con l'indirizzo email: ${email.trim()}\n\nPer motivi di sicurezza, non includiamo la tua password in questa email.\nSe dovessi dimenticarla, potrai sempre utilizzare la funzione "Hai dimenticato la password?" nella pagina di login.\n\nPreparati a investigare sui peggiori anti-pattern Scrum!`,
+        html: `<p>Ciao <b>${nickname.trim()}</b>,</p><p>La tua squadra è stata registrata con successo su Scrum Training App!</p><p>Hai effettuato l'accesso con l'indirizzo email: <b>${email.trim()}</b></p><br><p><i>Per motivi di sicurezza, non includiamo la tua password in questa email.</i><br>Se dovessi dimenticarla, potrai sempre utilizzare la funzione "Hai dimenticato la password?" nella pagina di login.</p><br><p>Preparati a investigare sui peggiori anti-pattern Scrum!</p>`,
       });
       previewUrl = nodemailer.getTestMessageUrl(info);
       console.log("Email mandata via Ethereal. URL di anteprima: %s", previewUrl);

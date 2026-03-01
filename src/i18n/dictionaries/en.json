@@ -39,7 +39,7 @@
     "hideHintBtn": "Hide Hint",
     "theLocation": "The Location",
     "theSuspect": "The Suspect",
-    "theWeapon": "The Weapon (Anti-pattern)",
+    "theWeapon": "The Weapon",
     "accuseBtn": "Make Accusation",
     "verifyingBtn": "Verifying...",
     "errorMissing": "You must select Location, Suspect, and Weapon to accuse!",

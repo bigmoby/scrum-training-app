@@ -45,7 +45,10 @@ export async function POST(request: Request) {
       correctSuspect: c.correctSuspect || '',
       explanationSuspect: c.explanationSuspect || '-',
       correctWeapon: c.correctWeapon || '',
-      explanationWeapon: c.explanationWeapon || '-'
+      explanationWeapon: c.explanationWeapon || '-',
+      locationChoices: Array.isArray(c.locationChoices) ? JSON.stringify(c.locationChoices) : (c.locationChoices || '[]'),
+      suspectChoices: Array.isArray(c.suspectChoices) ? JSON.stringify(c.suspectChoices) : (c.suspectChoices || '[]'),
+      weaponChoices: Array.isArray(c.weaponChoices) ? JSON.stringify(c.weaponChoices) : (c.weaponChoices || '[]'),
     }));
 
     await prisma.case.createMany({

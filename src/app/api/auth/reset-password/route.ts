@@ -58,9 +58,9 @@ export async function POST(request: Request) {
         });
 
         const info = await transporter.sendMail({
-          from: '"Scrum Cluedo" <noreply@scrumcluedo.local>',
+          from: '"Scrum Training App" <noreply@scrumtrainingapp.local>',
           to: resetToken.team.email,
-          subject: "Password Modificata con Successo - Scrum Cluedo",
+          subject: "Password Modificata con Successo - Scrum Training App",
           text: `Ciao ${resetToken.team.name},\n\nTi confermiamo che la password del tuo account è stata appena modificata con successo.\n\nSe non sei stato tu, contatta l'amministratore.\n\nBuona indagine!`,
           html: `<p>Ciao <b>${resetToken.team.name}</b>,</p><p>Ti confermiamo che la password del tuo account è stata appena modificata con successo.</p><p>Se non sei stato tu, contatta l'amministratore.</p><p>Buona indagine!</p>`,
         });

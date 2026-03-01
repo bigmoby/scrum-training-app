@@ -8,7 +8,7 @@ import { LanguageProvider } from '../i18n/LanguageContext';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 
 export const metadata: Metadata = {
-  title: 'Scrum Cluedo',
+  title: 'Scrum Training App',
   description: 'Un serious game per svelare i misteri degli antipattern Scrum',
 };
 
