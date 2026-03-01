@@ -53,8 +53,8 @@ If you want to run your own instance of the game, follow these steps to get a lo
 Clone the repository and install the dependencies:
 
 ```bash
-git clone https://github.com/your-username/scrum-game.git
-cd scrum-game
+git clone https://github.com/bigmoby/scrum-training-app.git
+cd scrum-training-app
 npm install
 ```
 
