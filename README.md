@@ -69,7 +69,7 @@ npx prisma generate
 # Create the database and push the schema
 npx prisma db push
 
-# (Optional) Seed the database with the initial 20 Cases and Admin user
+# (Optional) Seed the database with the initial 34 Cases and Admin user
 npx prisma db seed
 ```
 
@@ -137,7 +137,6 @@ If you want to wipe everything and restore only the game Cases and the Admin Tea
 3. Confirm with `y` (Yes).
 4. This command will drop the entire database, recreate it empty, and automatically run the `seed.ts` file, repopulating the initial setup.
 
-
 ## Contributing
 
 This is an active open-source project. We are always open to people who want to use the code or contribute to it.
@@ -152,20 +151,16 @@ If you find this project useful and want to support its evolution:
 
 <a href="https://www.buymeacoffee.com/bigmoby" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
-
 ## Maintainer
 
 Fabio Mauro (@bigmoby)  
-Agile Coach • Scrum Master • Software Engineer  
+Agile Coach • Scrum Master • Software Engineer
 
 Building tools to explore agility through practice and experimentation.
-
 
 ## License
 
 Licensed under the [Apache License Version 2.0](LICENSE.md)
-
-
 
 [original_project]: https://github.com/scrum-training-app
 [contributors]: https://github.com/bigmoby/scrum-training-app/graphs/contributors
