@@ -14,6 +14,30 @@ interface Case {
   hint: string;
 }
 
+// Helper component for selections, MUST be outside to preserve state and scroll position
+const SelectionGroup = ({ title, icon: Icon, options, value, onChange }: any) => (
+  <div className="glass-panel p-6 rounded-2xl">
+    <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+      <Icon className="text-primary w-5 h-5" /> {title}
+    </h3>
+    <div className="space-y-2 max-h-48 overflow-y-auto pr-2 custom-scrollbar">
+      {options.map((opt: string) => (
+        <label key={opt} className={`flex items-center gap-3 p-3 rounded-xl cursor-pointer transition-all border ${value === opt ? 'bg-primary/20 border-primary shadow-[0_0_15px_rgba(99,102,241,0.2)]' : 'bg-black/20 border-white/5 hover:border-white/20'}`}>
+          <div className={`w-5 h-5 rounded-full border flex items-center justify-center ${value === opt ? 'border-primary' : 'border-gray-500'}`}>
+            {value === opt && <div className="w-3 h-3 bg-primary rounded-full" />}
+          </div>
+          <span className={value === opt ? 'text-white' : 'text-gray-400'}>{opt}</span>
+          <input 
+            type="radio" name={title} value={opt} 
+            checked={value === opt} onChange={(e) => onChange(e.target.value)} 
+            className="hidden" 
+          />
+        </label>
+      ))}
+    </div>
+  </div>
+);
+
 export default function PlayGame() {
   const { t, lang } = useTranslation();
   const router = useRouter();
@@ -145,29 +169,7 @@ export default function PlayGame() {
     );
   }
 
-  // Helper component for selections
-  const SelectionGroup = ({ title, icon: Icon, options, value, onChange }: any) => (
-    <div className="glass-panel p-6 rounded-2xl">
-      <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-        <Icon className="text-primary w-5 h-5" /> {title}
-      </h3>
-      <div className="space-y-2 max-h-48 overflow-y-auto pr-2 custom-scrollbar">
-        {options.map((opt: string) => (
-          <label key={opt} className={`flex items-center gap-3 p-3 rounded-xl cursor-pointer transition-all border ${value === opt ? 'bg-primary/20 border-primary shadow-[0_0_15px_rgba(99,102,241,0.2)]' : 'bg-black/20 border-white/5 hover:border-white/20'}`}>
-            <div className={`w-5 h-5 rounded-full border flex items-center justify-center ${value === opt ? 'border-primary' : 'border-gray-500'}`}>
-              {value === opt && <div className="w-3 h-3 bg-primary rounded-full" />}
-            </div>
-            <span className={value === opt ? 'text-white' : 'text-gray-400'}>{opt}</span>
-            <input 
-              type="radio" name={title} value={opt} 
-              checked={value === opt} onChange={(e) => onChange(e.target.value)} 
-              className="hidden" 
-            />
-          </label>
-        ))}
-      </div>
-    </div>
-  );
+
 
   return (
     <div className="w-full max-w-5xl mx-auto pt-6 pb-20">
