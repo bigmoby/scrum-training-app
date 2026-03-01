@@ -61,10 +61,13 @@ export async function PUT(
         hint: body.hint,
         correctLocation: body.correctLocation,
         explanationLocation: body.explanationLocation,
+        locationChoices: Array.isArray(body.locationChoices) ? JSON.stringify(body.locationChoices) : body.locationChoices,
         correctSuspect: body.correctSuspect,
         explanationSuspect: body.explanationSuspect,
+        suspectChoices: Array.isArray(body.suspectChoices) ? JSON.stringify(body.suspectChoices) : body.suspectChoices,
         correctWeapon: body.correctWeapon,
         explanationWeapon: body.explanationWeapon,
+        weaponChoices: Array.isArray(body.weaponChoices) ? JSON.stringify(body.weaponChoices) : body.weaponChoices,
       },
     });
     

@@ -25,10 +25,13 @@ export default function CaseForm({ initialData = null, isEdit = false }: CaseFor
     hint: '',
     correctLocation: '',
     explanationLocation: '',
+    locationChoices: 'Sprint Planning, Daily Scrum, Sprint Review, Retrospective, Refinement, During Sprint, Team Meeting, Stakeholder Presentation, Manager Review',
     correctSuspect: '',
     explanationSuspect: '',
+    suspectChoices: 'PO, Scrum Master, DEV Team, Stakeholder, Manager, CEO',
     correctWeapon: '',
     explanationWeapon: '',
+    weaponChoices: 'Product Backlog, Sprint Backlog, Increment, Definition of Done, Sprint Goal, Product Goal, Jira Board, Story Points, Velocity, Burndown Chart, Sicurezza Psicologica (Mancanza di), Technical Debt',
   });
 
   useEffect(() => {
@@ -40,10 +43,13 @@ export default function CaseForm({ initialData = null, isEdit = false }: CaseFor
         hint: initialData.hint || '',
         correctLocation: initialData.correctLocation || '',
         explanationLocation: initialData.explanationLocation || '-',
+        locationChoices: initialData.locationChoices ? (typeof initialData.locationChoices === 'string' ? JSON.parse(initialData.locationChoices).join(', ') : initialData.locationChoices.join(', ')) : '',
         correctSuspect: initialData.correctSuspect || '',
         explanationSuspect: initialData.explanationSuspect || '-',
+        suspectChoices: initialData.suspectChoices ? (typeof initialData.suspectChoices === 'string' ? JSON.parse(initialData.suspectChoices).join(', ') : initialData.suspectChoices.join(', ')) : '',
         correctWeapon: initialData.correctWeapon || '',
         explanationWeapon: initialData.explanationWeapon || '-',
+        weaponChoices: initialData.weaponChoices ? (typeof initialData.weaponChoices === 'string' ? JSON.parse(initialData.weaponChoices).join(', ') : initialData.weaponChoices.join(', ')) : '',
       });
     }
   }, [initialData]);
@@ -68,13 +74,20 @@ export default function CaseForm({ initialData = null, isEdit = false }: CaseFor
       const url = isEdit ? `/api/admin/cases/${initialData.id}` : '/api/admin/cases';
       const method = isEdit ? 'PUT' : 'POST';
 
+      const payload = {
+        ...formData,
+        locationChoices: formData.locationChoices.split(',').map(s => s.trim()).filter(Boolean),
+        suspectChoices: formData.suspectChoices.split(',').map(s => s.trim()).filter(Boolean),
+        weaponChoices: formData.weaponChoices.split(',').map(s => s.trim()).filter(Boolean),
+      };
+
       const res = await fetch(url, {
         method,
         headers: { 
           'Content-Type': 'application/json',
           'x-team-id': team.id
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(payload)
       });
 
       if (!res.ok) {
@@ -171,68 +184,50 @@ export default function CaseForm({ initialData = null, isEdit = false }: CaseFor
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Luogo */}
             <div className="space-y-1 bg-white/5 p-4 rounded-xl border border-white/5">
+              <label className="text-xs font-semibold text-blue-400 uppercase tracking-widest">{t('admin', 'formLocationChoicesLabel')}</label>
+              <textarea name="locationChoices" value={formData.locationChoices} onChange={handleChange} placeholder="Sprint Planning, Daily Scrum, ..." rows={2} required className="w-full px-4 py-2 text-sm bg-black/40 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary text-white mb-2" />
+              
               <label className="text-xs font-semibold text-blue-400 uppercase tracking-widest">{t('admin', 'formCorrectLocationLabel')}</label>
               <select name="correctLocation" value={formData.correctLocation} onChange={handleChange} required className="w-full px-4 py-3 mb-2 bg-black/40 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary text-white">
                 <option value="" disabled>Select...</option>
-                <optgroup label="— Scrum Events —">
-                  <option value="Sprint Planning">Sprint Planning</option>
-                  <option value="Daily Scrum">Daily Scrum</option>
-                  <option value="Sprint Review">Sprint Review</option>
-                  <option value="Retrospective">Retrospective</option>
-                  <option value="Refinement">Refinement</option>
-                  <option value="During Sprint">During Sprint</option>
-                </optgroup>
-                <optgroup label="— Traps —">
-                  <option value="Team Meeting">Team Meeting</option>
-                  <option value="Stakeholder Presentation">Stakeholder Presentation</option>
-                  <option value="Manager Review">Manager Review</option>
-                </optgroup>
+                {formData.locationChoices.split(',').map(s => s.trim()).filter(Boolean).map(opt => (
+                  <option key={opt} value={opt}>{opt}</option>
+                ))}
               </select>
-              <textarea name="explanationLocation" value={formData.explanationLocation} onChange={handleChange} placeholder={t('admin', 'formExplanationLocationLabel')} rows={2} required className="w-full px-4 py-2 text-sm bg-black/40 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary text-white" />
+              <label className="text-xs font-semibold text-blue-400 uppercase tracking-widest mt-2">{t('admin', 'formExplanationLocationLabel')}</label>
+              <textarea name="explanationLocation" value={formData.explanationLocation} onChange={handleChange} placeholder={t('admin', 'formExplanationPlaceholder')} rows={2} required className="w-full px-4 py-2 text-sm bg-black/40 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary text-white" />
             </div>
 
             {/* Sospettato */}
             <div className="space-y-1 bg-white/5 p-4 rounded-xl border border-white/5">
+              <label className="text-xs font-semibold text-orange-400 uppercase tracking-widest">{t('admin', 'formSuspectChoicesLabel')}</label>
+              <textarea name="suspectChoices" value={formData.suspectChoices} onChange={handleChange} placeholder="PO, Scrum Master, DEV Team, ..." rows={2} required className="w-full px-4 py-2 text-sm bg-black/40 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary text-white mb-2" />
+
               <label className="text-xs font-semibold text-orange-400 uppercase tracking-widest">{t('admin', 'formCorrectSuspectLabel')}</label>
               <select name="correctSuspect" value={formData.correctSuspect} onChange={handleChange} required className="w-full px-4 py-3 mb-2 bg-black/40 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary text-white">
                 <option value="" disabled>Select...</option>
-                <optgroup label="— Scrum Accountabilities —">
-                  <option value="PO">Product Owner (PO)</option>
-                  <option value="Scrum Master">Scrum Master</option>
-                  <option value="DEV Team">Developer / DEV Team</option>
-                </optgroup>
-                <optgroup label="— Traps —">
-                  <option value="Stakeholder">Stakeholder</option>
-                  <option value="Manager">Manager</option>
-                  <option value="CEO">CEO</option>
-                </optgroup>
+                {formData.suspectChoices.split(',').map(s => s.trim()).filter(Boolean).map(opt => (
+                  <option key={opt} value={opt}>{opt}</option>
+                ))}
               </select>
-              <textarea name="explanationSuspect" value={formData.explanationSuspect} onChange={handleChange} placeholder={t('admin', 'formExplanationSuspectLabel')} rows={2} required className="w-full px-4 py-2 text-sm bg-black/40 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary text-white" />
+              <label className="text-xs font-semibold text-orange-400 uppercase tracking-widest mt-2">{t('admin', 'formExplanationSuspectLabel')}</label>
+              <textarea name="explanationSuspect" value={formData.explanationSuspect} onChange={handleChange} placeholder={t('admin', 'formExplanationPlaceholder')} rows={2} required className="w-full px-4 py-2 text-sm bg-black/40 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary text-white" />
             </div>
 
             {/* Arma */}
             <div className="col-span-1 md:col-span-2 space-y-1 bg-white/5 p-4 rounded-xl border border-white/5">
+              <label className="text-xs font-semibold text-red-500 uppercase tracking-widest">{t('admin', 'formWeaponChoicesLabel')}</label>
+              <textarea name="weaponChoices" value={formData.weaponChoices} onChange={handleChange} placeholder="Product Backlog, Sprint Backlog, ..." rows={2} required className="w-full px-4 py-2 text-sm bg-black/40 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary text-white mb-2" />
+
               <label className="text-xs font-semibold text-red-500 uppercase tracking-widest">{t('admin', 'formCorrectWeaponLabel')}</label>
               <select name="correctWeapon" value={formData.correctWeapon} onChange={handleChange} required className="w-full px-4 py-3 mb-2 bg-black/40 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary text-white">
                 <option value="" disabled>Select...</option>
-                <optgroup label="— Scrum Artifacts / Values —">
-                  <option value="Product Backlog">Product Backlog</option>
-                  <option value="Sprint Backlog">Sprint Backlog</option>
-                  <option value="Increment">Increment</option>
-                  <option value="Definition of Done">Definition of Done (DoD)</option>
-                  <option value="Sprint Goal">Sprint Goal</option>
-                  <option value="Product Goal">Product Goal</option>
-                </optgroup>
-                <optgroup label="— Traps & Anti-patterns —">
-                  <option value="Jira Board">Jira Board</option>
-                  <option value="Story Points">Story Points</option>
-                  <option value="Velocity">Velocity</option>
-                  <option value="Burndown Chart">Burndown Chart</option>
-                  <option value="Sicurezza Psicologica (Mancanza di)">Sicurezza Psicologica (Mancanza di)</option>
-                  <option value="Technical Debt">Technical Debt</option>
-                </optgroup>
+                {formData.weaponChoices.split(',').map(s => s.trim()).filter(Boolean).map(opt => (
+                  <option key={opt} value={opt}>{opt}</option>
+                ))}
               </select>
-              <textarea name="explanationWeapon" value={formData.explanationWeapon} onChange={handleChange} placeholder={t('admin', 'formExplanationWeaponLabel')} rows={2} required className="w-full px-4 py-2 text-sm bg-black/40 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary text-white" />
+              <label className="text-xs font-semibold text-red-500 uppercase tracking-widest mt-2">{t('admin', 'formExplanationWeaponLabel')}</label>
+              <textarea name="explanationWeapon" value={formData.explanationWeapon} onChange={handleChange} placeholder={t('admin', 'formExplanationPlaceholder')} rows={2} required className="w-full px-4 py-2 text-sm bg-black/40 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary text-white" />
             </div>
           </div>
         </div>

@@ -40,10 +40,13 @@ model Case {
   hint             String?
   correctLocation  String
   explanationLocation String     @default("-")
+  locationChoices  String        @default("[]")
   correctSuspect   String
   explanationSuspect String      @default("-")
+  suspectChoices   String        @default("[]")
   correctWeapon    String
   explanationWeapon String       @default("-")
+  weaponChoices    String        @default("[]")
   createdAt        DateTime      @default(now())
   playSessions     PlaySession[]
 }

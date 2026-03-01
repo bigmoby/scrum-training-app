@@ -9,7 +9,10 @@
     "correctSuspect": "PO",
     "explanationSuspect": "Il Product Owner è accountable per sviluppare ed esplicitare il Product Goal. Non basta consegnare feature sprint per sprint: il PO deve garantire che il lavoro del team si muova verso una visione coerente del prodotto.",
     "correctWeapon": "Product Goal",
-    "explanationWeapon": "Il Product Goal è il commitment del Product Backlog (Scrum Guide 2020). Senza di esso, il team produce incrementi validi ma non sa verso quale futuro stato del prodotto stia lavorando, rendendo impossibile prendere buone decisioni di prioritizzazione."
+    "explanationWeapon": "Il Product Goal è il commitment del Product Backlog (Scrum Guide 2020). Senza di esso, il team produce incrementi validi ma non sa verso quale futuro stato del prodotto stia lavorando, rendendo impossibile prendere buone decisioni di prioritizzazione.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "en",
@@ -21,7 +24,10 @@
     "correctSuspect": "PO",
     "explanationSuspect": "The Product Owner is accountable for developing and explicitly communicating the Product Goal. Delivering features sprint by sprint is not enough: the PO must ensure the team's work moves toward a coherent product vision.",
     "correctWeapon": "Product Goal",
-    "explanationWeapon": "The Product Goal is the commitment of the Product Backlog (Scrum Guide 2020). Without it, the team produces valid increments but has no target future state to work toward, making it impossible to make good prioritization decisions."
+    "explanationWeapon": "The Product Goal is the commitment of the Product Backlog (Scrum Guide 2020). Without it, the team produces valid increments but has no target future state to work toward, making it impossible to make good prioritization decisions.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "it",
@@ -33,7 +39,10 @@
     "correctSuspect": "Scrum Master",
     "explanationSuspect": "Lo Scrum Master è accountable per far sì che Scrum venga applicato correttamente. Avrebbe dovuto intervenire per far rispettare il limite massimo di un mese, spiegando che Sprint troppo lunghi aumentano il rischio e riducono i benefici dell'empirismo.",
     "correctWeapon": "Sprint",
-    "explanationWeapon": "La Scrum Guide definisce che uno Sprint non può superare un mese di calendario. Sprint più brevi limitano i rischi, aumentano la prevedibilità e permettono di incorporare feedback prima che l'investimento sbagliato diventi troppo costoso da correggere."
+    "explanationWeapon": "La Scrum Guide definisce che uno Sprint non può superare un mese di calendario. Sprint più brevi limitano i rischi, aumentano la prevedibilità e permettono di incorporare feedback prima che l'investimento sbagliato diventi troppo costoso da correggere.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "en",
@@ -45,7 +54,10 @@
     "correctSuspect": "Scrum Master",
     "explanationSuspect": "The Scrum Master is accountable for ensuring Scrum is applied correctly. They should have intervened to enforce the one-month maximum, explaining that overly long Sprints increase risk and reduce the benefits of empiricism.",
     "correctWeapon": "Sprint",
-    "explanationWeapon": "The Scrum Guide states that a Sprint cannot exceed one calendar month. Shorter Sprints limit risk, increase predictability, and allow feedback to be incorporated before a wrong investment becomes too costly to correct."
+    "explanationWeapon": "The Scrum Guide states that a Sprint cannot exceed one calendar month. Shorter Sprints limit risk, increase predictability, and allow feedback to be incorporated before a wrong investment becomes too costly to correct.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "it",
@@ -57,7 +69,10 @@
     "correctSuspect": "Scrum Master",
     "explanationSuspect": "Lo Scrum Master avrebbe dovuto proteggere il team dall'uso distorto delle metriche, spiegare la differenza tra indicatori di pianificazione e KPI valutativi, e favorire una cultura di miglioramento continuo basata sulla qualità del prodotto.",
     "correctWeapon": "Sprint Backlog",
-    "explanationWeapon": "Lo Sprint Backlog è diventato uno strumento di manipolazione invece che di trasparenza. Quando il team manipola le stime e i task per gonfiare i numeri, lo Sprint Backlog cessa di rappresentare la realtà e smette di essere un piano adattabile."
+    "explanationWeapon": "Lo Sprint Backlog è diventato uno strumento di manipolazione invece che di trasparenza. Quando il team manipola le stime e i task per gonfiare i numeri, lo Sprint Backlog cessa di rappresentare la realtà e smette di essere un piano adattabile.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "en",
@@ -69,7 +84,10 @@
     "correctSuspect": "Scrum Master",
     "explanationSuspect": "The Scrum Master should have protected the team from misuse of metrics, explained the difference between planning indicators and evaluative KPIs, and fostered a culture of continuous improvement based on product quality.",
     "correctWeapon": "Sprint Backlog",
-    "explanationWeapon": "The Sprint Backlog became a tool for manipulation instead of transparency. When the team games estimates and tasks to inflate numbers, the Sprint Backlog no longer represents reality and ceases to function as an adaptable plan."
+    "explanationWeapon": "The Sprint Backlog became a tool for manipulation instead of transparency. When the team games estimates and tasks to inflate numbers, the Sprint Backlog no longer represents reality and ceases to function as an adaptable plan.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "it",
@@ -81,7 +99,10 @@
     "correctSuspect": "PO",
     "explanationSuspect": "Il Product Owner è responsabile di invitare e coinvolgere gli stakeholder alla Sprint Review. Escluderli per evitare domande difficili nega al team informazioni critiche per massimizzare il valore del prodotto.",
     "correctWeapon": "Product Backlog",
-    "explanationWeapon": "Il Product Backlog non viene mai aggiornato in base a feedback reale degli stakeholder. Senza gli input della Review, rimane uno strumento di pianificazione cieco, disconnesso dalle reali esigenze del mercato."
+    "explanationWeapon": "Il Product Backlog non viene mai aggiornato in base a feedback reale degli stakeholder. Senza gli input della Review, rimane uno strumento di pianificazione cieco, disconnesso dalle reali esigenze del mercato.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "en",
@@ -93,7 +114,10 @@
     "correctSuspect": "PO",
     "explanationSuspect": "The Product Owner is responsible for inviting and engaging stakeholders at the Sprint Review. Excluding them to avoid difficult questions deprives the team of critical information needed to maximize product value.",
     "correctWeapon": "Product Backlog",
-    "explanationWeapon": "The Product Backlog is never updated based on real stakeholder feedback. Without Review inputs, it remains a blind planning tool, disconnected from the actual needs of the market."
+    "explanationWeapon": "The Product Backlog is never updated based on real stakeholder feedback. Without Review inputs, it remains a blind planning tool, disconnected from the actual needs of the market.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "it",
@@ -105,7 +129,10 @@
     "correctSuspect": "Scrum Master",
     "explanationSuspect": "Lo Scrum Master ha assunto comportamenti da project manager classico, violando il principio di auto-gestione del team. La Scrum Guide è esplicita: i Developers scelgono come strutturare il Daily Scrum. Lo SM deve farsi da parte.",
     "correctWeapon": "Sprint Backlog",
-    "explanationWeapon": "I Developers hanno rinunciato a gestire il proprio Sprint Backlog in autonomia. L'artefatto è nelle mani dello Scrum Master invece che del team, eliminando la responsabilità collettiva e l'adattamento quotidiano del piano."
+    "explanationWeapon": "I Developers hanno rinunciato a gestire il proprio Sprint Backlog in autonomia. L'artefatto è nelle mani dello Scrum Master invece che del team, eliminando la responsabilità collettiva e l'adattamento quotidiano del piano.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "en",
@@ -117,7 +144,10 @@
     "correctSuspect": "Scrum Master",
     "explanationSuspect": "The Scrum Master has taken on classic project manager behaviors, violating the team's self-management principle. The Scrum Guide is explicit: Developers choose how to structure their Daily Scrum. The SM must step back.",
     "correctWeapon": "Sprint Backlog",
-    "explanationWeapon": "The Developers have given up self-managing their own Sprint Backlog. The artifact is in the Scrum Master's hands instead of the team's, eliminating collective ownership and daily adaptation of the plan."
+    "explanationWeapon": "The Developers have given up self-managing their own Sprint Backlog. The artifact is in the Scrum Master's hands instead of the team's, eliminating collective ownership and daily adaptation of the plan.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "it",
@@ -129,7 +159,10 @@
     "correctSuspect": "Scrum Master",
     "explanationSuspect": "Lo Scrum Master ha commesso il crimine: imponendo di continuare lo Sprint, ha usurpato una decisione che spetta esclusivamente al Product Owner. Il suo ruolo è servire il team e l'organizzazione, non esercitare autorità sul processo in modo dogmatico. Avrebbe dovuto ricordare al PO che aveva il diritto — e in quel contesto il dovere — di cancellare lo Sprint.",
     "correctWeapon": "Sprint Goal",
-    "explanationWeapon": "Lo Sprint Goal era diventato obsoleto nel momento in cui il competitor ha reso inutile la funzionalità in sviluppo. La Scrum Guide è chiara: se lo Sprint Goal non ha più senso, lo Sprint può essere cancellato. Bloccare questa opzione significa sprecare deliberatamente valore e violare l'empirismo di Scrum."
+    "explanationWeapon": "Lo Sprint Goal era diventato obsoleto nel momento in cui il competitor ha reso inutile la funzionalità in sviluppo. La Scrum Guide è chiara: se lo Sprint Goal non ha più senso, lo Sprint può essere cancellato. Bloccare questa opzione significa sprecare deliberatamente valore e violare l'empirismo di Scrum.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "en",
@@ -141,7 +174,10 @@
     "correctSuspect": "Scrum Master",
     "explanationSuspect": "The Scrum Master committed the crime: by insisting the Sprint continue, they usurped a decision that belongs exclusively to the Product Owner. Their role is to serve the team and the organization, not to exercise authority over the process dogmatically. They should have reminded the PO that they had the right — and in that context the duty — to cancel the Sprint.",
     "correctWeapon": "Sprint Goal",
-    "explanationWeapon": "The Sprint Goal had become obsolete the moment the competitor rendered the feature in development worthless. The Scrum Guide is clear: if the Sprint Goal is no longer valid, the Sprint can be cancelled. Blocking this option means deliberately wasting value and violating Scrum's empiricism."
+    "explanationWeapon": "The Sprint Goal had become obsolete the moment the competitor rendered the feature in development worthless. The Scrum Guide is clear: if the Sprint Goal is no longer valid, the Sprint can be cancelled. Blocking this option means deliberately wasting value and violating Scrum's empiricism.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "it",
@@ -153,7 +189,10 @@
     "correctSuspect": "PO",
     "explanationSuspect": "Il Product Owner è accountable per la gestione efficace del Product Backlog, che include mantenerlo trasparente, visibile e comprensibile. Un backlog di 847 item irrisolti è una chiara violazione di questa responsabilità.",
     "correctWeapon": "Product Backlog",
-    "explanationWeapon": "Il Product Backlog ha perso la sua funzione di strumento di pianificazione trasparente. La Scrum Guide richiede che sia ordinato e che rifletta le priorità reali: un backlog caotico genera confusione, rallenta la pianificazione e impedisce decisioni di valore."
+    "explanationWeapon": "Il Product Backlog ha perso la sua funzione di strumento di pianificazione trasparente. La Scrum Guide richiede che sia ordinato e che rifletta le priorità reali: un backlog caotico genera confusione, rallenta la pianificazione e impedisce decisioni di valore.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "en",
@@ -165,7 +204,10 @@
     "correctSuspect": "PO",
     "explanationSuspect": "The Product Owner is accountable for effective Product Backlog management, which includes keeping it transparent, visible, and understood. A backlog of 847 unresolved items is a clear violation of this accountability.",
     "correctWeapon": "Product Backlog",
-    "explanationWeapon": "The Product Backlog has lost its function as a transparent planning tool. The Scrum Guide requires it to be ordered and to reflect real priorities: a chaotic backlog generates confusion, slows planning, and prevents value-based decisions."
+    "explanationWeapon": "The Product Backlog has lost its function as a transparent planning tool. The Scrum Guide requires it to be ordered and to reflect real priorities: a chaotic backlog generates confusion, slows planning, and prevents value-based decisions.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "it",
@@ -177,7 +219,10 @@
     "correctSuspect": "PO",
     "explanationSuspect": "Il Product Owner è l'unico che può modificare lo scope dello Sprint o negoziare una cancellazione; non ha protetto il team e l'obiettivo concordato di fronte alle pressioni esterne.",
     "correctWeapon": "Sprint Goal",
-    "explanationWeapon": "Lo Sprint Goal è l'impegno che protegge la concentrazione del team per tutta la durata dello Sprint; ignorarlo o abbandonarlo è l'antipattern che ha causato il fallimento."
+    "explanationWeapon": "Lo Sprint Goal è l'impegno che protegge la concentrazione del team per tutta la durata dello Sprint; ignorarlo o abbandonarlo è l'antipattern che ha causato il fallimento.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "en",
@@ -189,7 +234,10 @@
     "correctSuspect": "PO",
     "explanationSuspect": "The Product Owner is the only one who can modify the Sprint scope or negotiate a cancellation; they failed to protect the team and the agreed goal when facing external pressure.",
     "correctWeapon": "Sprint Goal",
-    "explanationWeapon": "The Sprint Goal is the commitment that protects the team's focus for the entire Sprint; ignoring or abandoning it is the anti-pattern that caused the failure."
+    "explanationWeapon": "The Sprint Goal is the commitment that protects the team's focus for the entire Sprint; ignoring or abandoning it is the anti-pattern that caused the failure.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "it",
@@ -201,7 +249,10 @@
     "correctSuspect": "DEV Team",
     "explanationSuspect": "Spetta ai Developers garantire e applicare tutele di qualità (Definition of Done) trasformando gli item in un incremento utilizzabile.",
     "correctWeapon": "Definition of Done",
-    "explanationWeapon": "Ignorare la Definition of Done porta a discrepanze su cosa significhi 'terminare un task', generando debito tecnico e inaffidabilità."
+    "explanationWeapon": "Ignorare la Definition of Done porta a discrepanze su cosa significhi 'terminare un task', generando debito tecnico e inaffidabilità.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "en",
@@ -213,7 +264,10 @@
     "correctSuspect": "DEV Team",
     "explanationSuspect": "It is up to the Developers to ensure and apply quality safeguards (Definition of Done) turning items into a usable increment.",
     "correctWeapon": "Definition of Done",
-    "explanationWeapon": "Ignoring the Definition of Done leads to discrepancies on what 'finishing a task' means, generating technical debt and unreliability."
+    "explanationWeapon": "Ignoring the Definition of Done leads to discrepancies on what 'finishing a task' means, generating technical debt and unreliability.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "it",
@@ -225,7 +279,10 @@
     "correctSuspect": "PO",
     "explanationSuspect": "Il Product Owner deve essere disponibile per il team; la sua assenza è la causa principale del disallineamento.",
     "correctWeapon": "Product Backlog",
-    "explanationWeapon": "Il Backlog non è stato rifinito né spiegato, diventando un'arma contundente contro l'efficacia del team."
+    "explanationWeapon": "Il Backlog non è stato rifinito né spiegato, diventando un'arma contundente contro l'efficacia del team.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "en",
@@ -237,7 +294,10 @@
     "correctSuspect": "PO",
     "explanationSuspect": "The Product Owner must be available to the team; their absence is the root cause of the misalignment.",
     "correctWeapon": "Product Backlog",
-    "explanationWeapon": "The Backlog was neither refined nor explained, becoming an obstacle to the team's effectiveness."
+    "explanationWeapon": "The Backlog was neither refined nor explained, becoming an obstacle to the team's effectiveness.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "it",
@@ -249,7 +309,10 @@
     "correctSuspect": "DEV Team",
     "explanationSuspect": "I Developer hanno la responsabilità della trasparenza tecnica verso i colleghi per risolvere i problemi collettivamente.",
     "correctWeapon": "Sprint Backlog",
-    "explanationWeapon": "Il Developer non ha aggiornato lo Sprint Backlog per rendere visibile l'impedimento. Lo Sprint Backlog è l'artefatto che deve rivelare la verità sul progresso e i rischi dello Sprint."
+    "explanationWeapon": "Il Developer non ha aggiornato lo Sprint Backlog per rendere visibile l'impedimento. Lo Sprint Backlog è l'artefatto che deve rivelare la verità sul progresso e i rischi dello Sprint.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "en",
@@ -261,7 +324,10 @@
     "correctSuspect": "DEV Team",
     "explanationSuspect": "Developers have a responsibility for technical transparency toward their peers to solve problems collectively.",
     "correctWeapon": "Sprint Backlog",
-    "explanationWeapon": "The Developer failed to update the Sprint Backlog to make the impediment visible. The Sprint Backlog is the artifact that must reveal the truth about progress and Sprint risks."
+    "explanationWeapon": "The Developer failed to update the Sprint Backlog to make the impediment visible. The Sprint Backlog is the artifact that must reveal the truth about progress and Sprint risks.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "it",
@@ -273,7 +339,10 @@
     "correctSuspect": "PO",
     "explanationSuspect": "Il PO non dovrebbe creare barriere o circoli ristretti, ma favorire la comprensione condivisa di tutti.",
     "correctWeapon": "Product Backlog",
-    "explanationWeapon": "Il modo in cui viene gestito il Backlog è diventato un mezzo di esclusione invece che uno strumento di allineamento."
+    "explanationWeapon": "Il modo in cui viene gestito il Backlog è diventato un mezzo di esclusione invece che uno strumento di allineamento.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "en",
@@ -285,7 +354,10 @@
     "correctSuspect": "PO",
     "explanationSuspect": "The PO should not create barriers or inner circles, but foster shared understanding among everyone.",
     "correctWeapon": "Product Backlog",
-    "explanationWeapon": "The way the Backlog is managed has become a means of exclusion rather than an alignment tool."
+    "explanationWeapon": "The way the Backlog is managed has become a means of exclusion rather than an alignment tool.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "it",
@@ -297,7 +369,10 @@
     "correctSuspect": "PO",
     "explanationSuspect": "Il Product Owner ha la responsabilità di proporre uno Sprint Goal durante il Planning. Portare item tecnici ben scritti ma privi di un filo condiviso significa aver preparato il Backlog ma non la direzione dello Sprint.",
     "correctWeapon": "Sprint Goal",
-    "explanationWeapon": "Lo Sprint Goal non è un optional: è il commitment dello Sprint che dà al team un obiettivo unificante, permette di prendere decisioni durante lo Sprint e comunica valore agli stakeholder. Senza di esso, ogni Sprint è una corsa senza traguardo."
+    "explanationWeapon": "Lo Sprint Goal non è un optional: è il commitment dello Sprint che dà al team un obiettivo unificante, permette di prendere decisioni durante lo Sprint e comunica valore agli stakeholder. Senza di esso, ogni Sprint è una corsa senza traguardo.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "en",
@@ -309,7 +384,10 @@
     "correctSuspect": "PO",
     "explanationSuspect": "The Product Owner is responsible for proposing a Sprint Goal during Planning. Bringing well-written technical items without a shared thread means having prepared the Backlog but not the Sprint's direction.",
     "correctWeapon": "Sprint Goal",
-    "explanationWeapon": "The Sprint Goal is not optional: it is the Sprint's commitment that gives the team a unifying objective, enables decisions during the Sprint, and communicates value to stakeholders. Without it, every Sprint is a race without a finish line."
+    "explanationWeapon": "The Sprint Goal is not optional: it is the Sprint's commitment that gives the team a unifying objective, enables decisions during the Sprint, and communicates value to stakeholders. Without it, every Sprint is a race without a finish line.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "it",
@@ -321,7 +399,10 @@
     "correctSuspect": "Scrum Master",
     "explanationSuspect": "Lo Scrum Master era a conoscenza dei problemi reali prima dell'evento e non li ha portati in superficie. La Scrum Guide assegna allo SM la responsabilità di facilitare la Retrospective in modo che sia positiva e produttiva. Evitare il conflitto non è facilitazione: è complicità nel mantenere lo status quo.",
     "correctWeapon": "Sprint Retrospective",
-    "explanationWeapon": "La Retrospective stessa è l'arma del delitto: usata come rituale vuoto invece che come strumento di miglioramento reale, diventa un alibi per non cambiare nulla. Un evento Scrum che non produce adattamento concreto tradisce uno dei tre pilastri dell'empirismo: l'adattamento."
+    "explanationWeapon": "La Retrospective stessa è l'arma del delitto: usata come rituale vuoto invece che come strumento di miglioramento reale, diventa un alibi per non cambiare nulla. Un evento Scrum che non produce adattamento concreto tradisce uno dei tre pilastri dell'empirismo: l'adattamento.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "en",
@@ -333,7 +414,10 @@
     "correctSuspect": "Scrum Master",
     "explanationSuspect": "The Scrum Master was aware of the real problems before the event and did not surface them. The Scrum Guide assigns the SM responsibility for facilitating the Retrospective so that it is positive and productive. Avoiding conflict is not facilitation: it is complicity in maintaining the status quo.",
     "correctWeapon": "Sprint Retrospective",
-    "explanationWeapon": "The Retrospective itself is the murder weapon: used as an empty ritual instead of a real improvement tool, it becomes an alibi for changing nothing. A Scrum event that produces no concrete adaptation betrays one of the three pillars of empiricism: adaptation."
+    "explanationWeapon": "The Retrospective itself is the murder weapon: used as an empty ritual instead of a real improvement tool, it becomes an alibi for changing nothing. A Scrum event that produces no concrete adaptation betrays one of the three pillars of empiricism: adaptation.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "it",
@@ -345,7 +429,10 @@
     "correctSuspect": "Scrum Master",
     "explanationSuspect": "Lo Scrum Master è accountable per rimuovere gli impedimenti al progresso del team e per guidare l'organizzazione nell'adozione di Scrum. Tacere di fronte a una struttura organizzativa che rende impossibile applicare Scrum non è rispetto dei confini: è un fallimento della propria responsabilità verso l'organizzazione.",
     "correctWeapon": "Increment",
-    "explanationWeapon": "L'Increment è la vittima: senza team cross-funzionali, non esiste la possibilità di produrre software funzionante entro uno Sprint. La Scrum Guide è esplicita — i Developers devono avere tutte le competenze necessarie per creare valore ogni Sprint, senza dipendenze esterne."
+    "explanationWeapon": "L'Increment è la vittima: senza team cross-funzionali, non esiste la possibilità di produrre software funzionante entro uno Sprint. La Scrum Guide è esplicita — i Developers devono avere tutte le competenze necessarie per creare valore ogni Sprint, senza dipendenze esterne.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "en",
@@ -357,7 +444,10 @@
     "correctSuspect": "Scrum Master",
     "explanationSuspect": "The Scrum Master is accountable for removing impediments to the team's progress and for guiding the organization in adopting Scrum. Staying silent in the face of an organizational structure that makes Scrum impossible is not respecting boundaries: it is a failure of one's accountability toward the organization.",
     "correctWeapon": "Increment",
-    "explanationWeapon": "The Increment is the victim: without cross-functional teams, it is impossible to produce working software within a Sprint. The Scrum Guide is explicit — Developers must have all the skills necessary to create value every Sprint, without external dependencies."
+    "explanationWeapon": "The Increment is the victim: without cross-functional teams, it is impossible to produce working software within a Sprint. The Scrum Guide is explicit — Developers must have all the skills necessary to create value every Sprint, without external dependencies.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "it",
@@ -369,7 +459,10 @@
     "correctSuspect": "Scrum Master",
     "explanationSuspect": "La Scrum Guide assegna allo Scrum Master la responsabilità esplicita di rimuovere gli impedimenti al progresso del team. Annotare il problema senza risolverlo o escalarlo è una forma di inazione che viola direttamente questa accountability.",
     "correctWeapon": "Sprint Backlog",
-    "explanationWeapon": "Lo Sprint Backlog mostrava ogni giorno l'impedimento irrisolto, ma nessuno ha adattato il piano di conseguenza né agito per sbloccare la situazione. Un piano che non si adatta di fronte agli ostacoli non è empirismo: è esecuzione cieca."
+    "explanationWeapon": "Lo Sprint Backlog mostrava ogni giorno l'impedimento irrisolto, ma nessuno ha adattato il piano di conseguenza né agito per sbloccare la situazione. Un piano che non si adatta di fronte agli ostacoli non è empirismo: è esecuzione cieca.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "en",
@@ -381,7 +474,10 @@
     "correctSuspect": "Scrum Master",
     "explanationSuspect": "The Scrum Guide explicitly assigns the Scrum Master responsibility for removing impediments to the team's progress. Logging the problem without resolving or escalating it is a form of inaction that directly violates this accountability.",
     "correctWeapon": "Sprint Backlog",
-    "explanationWeapon": "The Sprint Backlog showed the unresolved impediment every day, but nobody adapted the plan accordingly or acted to unblock the situation. A plan that doesn't adapt in the face of obstacles isn't empiricism: it's blind execution."
+    "explanationWeapon": "The Sprint Backlog showed the unresolved impediment every day, but nobody adapted the plan accordingly or acted to unblock the situation. A plan that doesn't adapt in the face of obstacles isn't empiricism: it's blind execution.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "it",
@@ -393,7 +489,10 @@
     "correctSuspect": "Scrum Master",
     "explanationSuspect": "Jonas sapeva già dalla Retrospective precedente che il team non si sentiva allineato col PO, e ha rimandato invece di agire. La Scrum Guide assegna allo Scrum Master la responsabilità di promuovere i valori Scrum — in particolare il coraggio e l'apertura — e di aiutare il team a migliorare le pratiche di interazione. Rimandare un problema noto è una scelta attiva.",
     "correctWeapon": "Product Backlog",
-    "explanationWeapon": "Il Product Backlog non era sufficientemente chiaro e condiviso da permettere al team di capire il valore da consegnare. Ma il vero crimine non è la qualità degli item: è che nessuno ha creato lo spazio per chiarirli durante lo Sprint, quando c'era ancora tempo."
+    "explanationWeapon": "Il Product Backlog non era sufficientemente chiaro e condiviso da permettere al team di capire il valore da consegnare. Ma il vero crimine non è la qualità degli item: è che nessuno ha creato lo spazio per chiarirli durante lo Sprint, quando c'era ancora tempo.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   },
   {
     "lang": "en",
@@ -405,6 +504,9 @@
     "correctSuspect": "Scrum Master",
     "explanationSuspect": "Jonas already knew from the previous Retrospective that the team didn't feel aligned with the PO, and chose to postpone instead of acting. The Scrum Guide assigns the Scrum Master responsibility for promoting Scrum values — particularly courage and openness — and for helping the team improve interaction practices. Deferring a known problem is an active choice.",
     "correctWeapon": "Product Backlog",
-    "explanationWeapon": "The Product Backlog was not clear or shared enough to allow the team to understand the value to deliver. But the real crime is not the quality of the items: it's that nobody created space to clarify them during the Sprint, when there was still time."
+    "explanationWeapon": "The Product Backlog was not clear or shared enough to allow the team to understand the value to deliver. But the real crime is not the quality of the items: it's that nobody created space to clarify them during the Sprint, when there was still time.",
+    "locationChoices": "[\"Sprint Planning\",\"Daily Scrum\",\"Sprint Review\",\"Retrospective\",\"Refinement\",\"During Sprint\",\"Team Meeting\",\"Stakeholder Presentation\",\"Manager Review\"]",
+    "suspectChoices": "[\"PO\",\"Scrum Master\",\"DEV Team\",\"Stakeholder\",\"Manager\",\"CEO\"]",
+    "weaponChoices": "[\"Product Backlog\",\"Sprint Backlog\",\"Increment\",\"Definition of Done\",\"Sprint Goal\",\"Product Goal\",\"Jira Board\",\"Story Points\",\"Velocity\",\"Burndown Chart\",\"Sicurezza Psicologica (Mancanza di)\",\"Technical Debt\"]"
   }
 ]

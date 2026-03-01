@@ -37,28 +37,11 @@ export default function PlayGame() {
   const [displayedSuspects, setDisplayedSuspects] = useState<string[]>([]);
   const [displayedWeapons, setDisplayedWeapons] = useState<string[]>([]);
 
-  // Full option pools
-  const allLocations = [
-    "Sprint Planning", "Daily Scrum", "Sprint Review", "Retrospective",
-    "Refinement", "During Sprint",
-    "Team Meeting", "Stakeholder Presentation", "Manager Review",
-  ];
-  const allSuspects = [
-    "PO", "Scrum Master", "DEV Team",
-    "Stakeholder", "Manager", "CEO",
-  ];
-  const allWeapons = [
-    "Product Backlog", "Sprint Backlog", "Increment",
-    "Definition of Done", "Sprint Goal", "Product Goal",
-    "Jira Board", "Story Points", "Velocity",
-    "Burndown Chart", "Sicurezza Psicologica (Mancanza di)", "Technical Debt",
-  ];
-
-  /** Returns `count` unique items from `pool`, always including `mustInclude`. */
-  function buildOptions(pool: string[], mustInclude: string, count: number): string[] {
-    const others = pool.filter(o => o !== mustInclude);
+  /** Returns the pool randomized, ensuring `mustInclude` is included. */
+  function buildOptions(pool: string[], mustInclude: string): string[] {
+    const others = pool.filter(o => o.trim() !== mustInclude.trim());
     const shuffled = [...others].sort(() => Math.random() - 0.5);
-    const picked = [mustInclude, ...shuffled.slice(0, count - 1)];
+    const picked = [mustInclude, ...shuffled];
     return picked.sort(() => Math.random() - 0.5);
   }
 
@@ -84,16 +67,21 @@ export default function PlayGame() {
 
     async function fetchCase() {
       try {
-        const res = await fetch(`/api/cases/random?teamId=${parsedTeam.id}&lang=${lang}`);
+        const res = await fetch(`/api/cases/random?teamId=${parsedTeam.id}&lang=${lang}&timestamp=${Date.now()}`, {
+          cache: 'no-store',
+          headers: {
+            'Cache-Control': 'no-cache'
+          }
+        });
         const data = await res.json();
         if (!res.ok) {
           setError(data.message || t('play', 'noMoreCases'));
         } else {
           setCaseData(data.caseData);
           // Build randomized option subsets now that we know the correct answers
-          setDisplayedLocations(buildOptions(allLocations, data.caseData.correctLocation, 6));
-          setDisplayedSuspects(buildOptions(allSuspects, data.caseData.correctSuspect, 4));
-          setDisplayedWeapons(buildOptions(allWeapons, data.caseData.correctWeapon, 6));
+          setDisplayedLocations(buildOptions(data.caseData.locationChoices || [], data.caseData.correctLocation));
+          setDisplayedSuspects(buildOptions(data.caseData.suspectChoices || [], data.caseData.correctSuspect));
+          setDisplayedWeapons(buildOptions(data.caseData.weaponChoices || [], data.caseData.correctWeapon));
         }
       } catch (err: any) {
         setError('Errore di connessione');

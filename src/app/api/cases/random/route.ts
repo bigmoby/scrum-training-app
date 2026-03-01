@@ -3,6 +3,8 @@ import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const teamId = searchParams.get('teamId');
@@ -38,7 +40,14 @@ export async function GET(request: Request) {
     // Pick a random case
     const randomCase = availableCases[Math.floor(Math.random() * availableCases.length)];
 
-    return NextResponse.json({ caseData: randomCase });
+    const parsedCase = {
+      ...randomCase,
+      locationChoices: JSON.parse(randomCase.locationChoices || '[]'),
+      suspectChoices: JSON.parse(randomCase.suspectChoices || '[]'),
+      weaponChoices: JSON.parse(randomCase.weaponChoices || '[]'),
+    };
+
+    return NextResponse.json({ caseData: parsedCase });
   } catch (error) {
     console.error('Error fetching random case', error);
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
