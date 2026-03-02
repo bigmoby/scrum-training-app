@@ -45,6 +45,7 @@
     "errorMissing": "Devi selezionare Luogo, Sospettato e Arma per accusare!",
     "loadingCases": "Collegamento all'archivio casi...",
     "noMoreCases": "Ufficio Indagini Chiuso",
+    "noMoreCasesDesc": "Hai risolto tutti i casi a disposizione! Ottimo lavoro, detective. Torna più tardi per nuovi fascicoli.",
     "backToDashboard": "Torna alla Dashboard",
     "investigationResult": "Esito Indagine",
     "youScored": "Hai ottenuto",

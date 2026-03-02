@@ -99,7 +99,7 @@ export default function PlayGame() {
         });
         const data = await res.json();
         if (!res.ok) {
-          setError(data.message || t('play', 'noMoreCases'));
+          setError(res.status === 404 ? t('play', 'noMoreCases') : (data.message || data.error || t('play', 'noMoreCases')));
         } else {
           setCaseData(data.caseData);
           // Build randomized option subsets now that we know the correct answers
@@ -161,7 +161,7 @@ export default function PlayGame() {
     return (
       <div className="w-full max-w-2xl mx-auto pt-20 text-center">
         <h2 className="text-2xl font-bold text-white mb-4">{t('play', 'noMoreCases')}</h2>
-        <p className="text-gray-400 mb-8">{error}</p>
+        <p className="text-gray-400 mb-8">{error === t('play', 'noMoreCases') ? t('play', 'noMoreCasesDesc') : error}</p>
         <Link href="/dashboard" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-xl hover:bg-primary/90 transition-all">
           <ArrowLeft className="w-5 h-5" /> {t('play', 'backToDashboard')}
         </Link>

@@ -45,6 +45,7 @@
     "errorMissing": "You must select Location, Suspect, and Weapon to accuse!",
     "loadingCases": "Connecting to cases archive...",
     "noMoreCases": "Investigation Office Closed",
+    "noMoreCasesDesc": "You've solved all available cases! Great job, detective. Come back later for new investigative files.",
     "backToDashboard": "Back to Dashboard",
     "investigationResult": "Investigation Result",
     "youScored": "You scored",
