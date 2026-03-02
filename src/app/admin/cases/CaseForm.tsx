@@ -31,7 +31,7 @@ export default function CaseForm({ initialData = null, isEdit = false }: CaseFor
     suspectChoices: 'PO, Scrum Master, DEV Team, Stakeholder, Manager, CEO',
     correctWeapon: '',
     explanationWeapon: '',
-    weaponChoices: 'Product Backlog, Sprint Backlog, Increment, Definition of Done, Sprint Goal, Product Goal, Jira Board, Story Points, Velocity, Burndown Chart, Sicurezza Psicologica (Mancanza di), Technical Debt',
+    weaponChoices: 'Product Backlog, Sprint Backlog, Increment, Definition of Done, Sprint Goal, Product Goal, Jira Board, Story Points, Velocity, Burndown Chart, Sicurezza Psicologica (mancanza di), Technical Debt',
   });
 
   useEffect(() => {
