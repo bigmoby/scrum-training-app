@@ -73,6 +73,47 @@ cases can be created and shared.
 
 ---
 
+## 🕵️ Example Cases
+
+Here are some examples of investigations you may encounter.
+
+### The Silent Product Owner
+
+The Sprint Review ends in five minutes.  
+Stakeholders say nothing.  
+The Product Owner quickly accepts the Increment.
+
+Everything looks fine... but something feels wrong.
+
+Can you identify the real anti-pattern?
+
+---
+
+### The Endless Refinement
+
+The team spends hours refining backlog items every week.  
+Stories become extremely detailed before development starts.
+
+Developers feel safe.
+
+But delivery is getting slower and slower.
+
+What is the underlying dysfunction?
+
+---
+
+### The Perfect Sprint
+
+Every Sprint ends exactly as planned.  
+All stories are completed.  
+Velocity is stable.
+
+But customers never notice any improvement.
+
+Is this really a healthy Scrum team?
+
+---
+
 ## 🧠 What you can learn
 
 Playing the cases helps recognize common Agile problems:
