@@ -197,10 +197,11 @@ Open source grows through **community experimentation**.
 
 If you find this project useful and want to support its evolution:
 
-`<a href="https://www.buymeacoffee.com/bigmoby" target="_blank">`{=html}
-`<img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png"
-alt="Buy Me A Coffee"
-style="height: 41px;width: 174px;">`{=html} `</a>`{=html}
+<a href="https://www.buymeacoffee.com/bigmoby" target="_blank">
+  <img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png"
+  alt="Buy Me A Coffee"
+  style="height:41px;width:174px;">
+</a>
 
 ---
 
