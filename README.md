@@ -19,7 +19,7 @@ Discover what really went wrong in the Sprint.
 Because Agile is not learned from slides \
 it is learned by **recognizing dysfunctions in real teams**.
 
-------------------------------------------------------------------------
+---
 
 ## 🎮 What is this?
 
@@ -35,7 +35,7 @@ Each case works like a **detective investigation**:
 
 The goal is to train **critical thinking and observation**, not memorization.
 
-------------------------------------------------------------------------
+---
 
 ## 💡 Why this project exists
 
@@ -54,7 +54,7 @@ They fail because of subtle dysfunctions such as:
 
 This project simulates **real scenarios Scrum Masters encounter in real teams**.
 
-------------------------------------------------------------------------
+---
 
 ## 🧩 Inspired by "Murder in the Sprint"
 
@@ -68,21 +68,17 @@ The goal is not to replicate the original work but to create a
 **community‑extendable open platform** where new Agile investigation
 cases can be created and shared.
 
-------------------------------------------------------------------------
+---
 
 ## 📸 Screenshots
 
 ### Gameplay
 
 <p align="center">
-  <img src="./public/docs/screenshot-1.png" width="800" alt="Login & Registration" />
-  <br/><br/>
-  <img src="./public/docs/screenshot-2.png" width="800" alt="Investigation Dashboard" />
-  <br/><br/>
-  <img src="./public/docs/screenshot-4.png" width="800" alt="Case Investigation" />
+  <img src="./docs/gameplay.gif" width="900">
 </p>
 
-------------------------------------------------------------------------
+---
 
 ## 🧠 What you can learn
 
@@ -97,7 +93,7 @@ Playing the cases helps recognize common Agile problems:
 
 Each investigation ends with a **clear explanation of the root cause**.
 
-------------------------------------------------------------------------
+---
 
 ## 🤖 AI‑Agent Friendly Development
 
@@ -113,33 +109,33 @@ It provides structured guidance about:
 
 This allows tools like:
 
--   Cursor
--   GitHub Copilot
--   Claude Code
--   AI development agents
+- Cursor
+- GitHub Copilot
+- Claude Code
+- AI development agents
 
 to interact with the repository **safely and consistently**.
 
-------------------------------------------------------------------------
+---
 
 ## 🚀 Running the project
 
 Clone the repository:
 
-``` bash
+```bash
 git clone https://github.com/bigmoby/scrum-training-app.git
 cd scrum-training-app
 ```
 
 Install dependencies:
 
-``` bash
+```bash
 npm install
 ```
 
 Run the development server:
 
-``` bash
+```bash
 npm run dev
 ```
 
@@ -151,7 +147,7 @@ For full development and deployment documentation see:
 
 ➡️ **[DOC.md](DOC.md)**
 
-------------------------------------------------------------------------
+---
 
 ## 🤝 Contributing
 
@@ -176,7 +172,7 @@ Contribution guidelines are available here:
 
 ➡️ **[CONTRIBUTING.md](CONTRIBUTING.md)**
 
-------------------------------------------------------------------------
+---
 
 ## 🌍 Who is this for?
 
@@ -187,7 +183,7 @@ Contribution guidelines are available here:
 • Agile trainers\
 • facilitation workshops
 
-------------------------------------------------------------------------
+---
 
 ## ⭐ Support the project
 
@@ -206,14 +202,13 @@ If you find this project useful and want to support its evolution:
 alt="Buy Me A Coffee"
 style="height: 41px;width: 174px;">`{=html} `</a>`{=html}
 
-------------------------------------------------------------------------
+---
 
 ## License
 
 Licensed under the [Apache License Version 2.0](LICENSE.md)
 
-------------------------------------------------------------------------
-
+---
 
 [original_project]: https://github.com/scrum-training-app
 [contributors]: https://github.com/bigmoby/scrum-training-app/graphs/contributors
