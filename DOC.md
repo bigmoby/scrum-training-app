@@ -1,69 +1,87 @@
-# Scrum Training App --- Development & Deployment Guide
+# 🛠 Developer Documentation
 
-This document contains **technical documentation for developers and
-contributors**. It is intentionally separated from the main README to
-keep the repository landing page focused on the project vision.
+This document contains technical documentation for developers and
+contributors.
 
----
+## 🚀 Quick Start
 
-## Development Setup
+Clone the repository and start the development server.
 
-### 1. Clone the repository
-
-```bash
+``` bash
 git clone https://github.com/bigmoby/scrum-training-app.git
 cd scrum-training-app
-```
-
-### 2. Install dependencies
-
-The project uses Node.js and npm.
-
-```bash
 npm install
-```
-
-### 3. Run the development server
-
-```bash
 npm run dev
 ```
 
-The application will start in development mode and typically be
-available at:
+Open the application:
 
-    http://localhost:5173
+http://localhost:5173
 
-(The exact port depends on the configuration of the Vite dev server.)
+## Requirements
 
----
+The project requires:
 
-## Project Structure
+-   Node.js **18+**
+-   npm **9+**
 
-Typical structure of the project:
+## Installation
 
-    scrum-training-app
-    │
-    ├── public/                 # Static assets
-    │   └── docs/               # Screenshots and documentation images
-    │
-    ├── src/                    # Application source code
-    │
-    ├── prisma/                 # Prisma schema and database
-    │
-    ├── AGENTS.md               # Instructions for AI coding agents
-    │
-    ├── README.md               # Project overview
-    │
-    └── package.json            # Project dependencies and scripts
+Install project dependencies:
 
----
+``` bash
+npm install
+```
+
+Run the development server:
+
+``` bash
+npm run dev
+```
+
+## Environment Variables
+
+Create a `.env` file in the project root.
+
+Example:
+
+``` env
+DATABASE_URL="file:./dev.db"
+
+SMTP_HOST=smtp.example.com
+SMTP_USER=your_user
+SMTP_PASS=your_password
+```
+
+## Database Setup
+
+The project uses **Prisma** with a local **SQLite database**.
+
+Initialize the database:
+
+``` bash
+npx prisma generate
+npx prisma db push
+npx prisma db seed
+```
+
+## Running the Project
+
+Start the development server:
+
+``` bash
+npm run dev
+```
+
+The application will usually run at:
+
+http://localhost:5173
 
 ## Production Build
 
-To create a production-ready build:
+Create a production build:
 
-```bash
+``` bash
 npm run build
 ```
 
@@ -73,85 +91,33 @@ The compiled application will be generated in the:
 
 directory.
 
----
+Preview the production build locally:
 
-## Database Setup
-
-This project uses **SQLite** for zero‑configuration local development
-and **Prisma** as ORM.
-
-Initialize the database with:
-
-```bash
-# Generate the Prisma Client
-npx prisma generate
-
-# Create the database and push the schema
-npx prisma db push
-
-# (Optional) Seed the database with the initial Cases and Admin user
-npx prisma db seed
-```
-
----
-
-## Environment Variables
-
-Create a `.env` file in the project root.
-
-Example:
-
-```env
-DATABASE_URL="file:./dev.db"
-
-SMTP_USER=your_user
-SMTP_PASS=your_password
-```
-
-These variables are required when switching from development email
-testing to real SMTP providers.
-
----
-
-## Running the Production Build
-
-You can preview the production build locally with:
-
-```bash
+``` bash
 npm run preview
 ```
-
-This simulates how the application will behave once deployed.
-
----
 
 ## Email Configuration (Production)
 
 In development the application may use **Ethereal email** for testing.
 
-To send **real emails** to users you must configure a real SMTP provider
-(e.g., Gmail, SendGrid, Amazon SES).
+To send real emails configure a real SMTP provider (e.g. Gmail,
+SendGrid, Amazon SES).
 
-Steps:
-
-1.  Open
-
-```{=html}
-<!-- -->
-```
+### Files to modify
 
     src/app/api/auth/signup/route.ts
     src/app/api/auth/forgot-password/route.ts
 
-2.  Locate the configuration:
+Locate the transport configuration:
 
-```javascript
+``` javascript
 nodemailer.createTransport({...})
 ```
 
-3.  Replace the Ethereal configuration with environment variables:
+Replace with environment variables:
 
-```javascript
+``` javascript
 host: process.env.SMTP_HOST,
 auth: {
   user: process.env.SMTP_USER,
@@ -159,107 +125,65 @@ auth: {
 }
 ```
 
-4.  Save your credentials inside the `.env` file.
+Save the credentials in the `.env` file.
 
----
+## Database Management
 
-## Database Management (Prisma)
+### Open Prisma Studio
 
-The project uses **Prisma** with a local **SQLite database**.
-
-Database file:
-
-    prisma/dev.db
-
-### Clearing the database (Reset)
-
-If you want to delete all registered teams and start from scratch during
-testing, you have two options.
-
-### Option 1 --- Prisma Studio (Recommended)
-
-1.  Open a **new terminal** in the project folder.
-2.  Run:
-
-```bash
+``` bash
 npx prisma studio
 ```
 
-3.  Prisma Studio will open in your browser:
+Open:
 
-```{=html}
-<!-- -->
-```
+http://localhost:5555
 
-    http://localhost:5555
+### Reset Database
 
-4.  From the UI you can inspect and delete records in tables like:
-
-- Team
-- PlaySession
-
-5.  When finished press **CTRL + C** in the terminal to stop the
-    service.
-
----
-
-### Option 2 --- Terminal Reset
-
-If you want a **complete reset of the database**:
-
-```bash
+``` bash
 npx prisma migrate reset
 ```
 
-⚠️ **Warning:**\
-This command deletes the entire database and all existing data.
-
-It will then recreate the database and run the seed file automatically.
-
----
+⚠️ Warning: this command deletes the entire database.
 
 ## Deployment
 
-Because the application is a **static web application**, it can be
-deployed easily on:
+The application can be deployed to:
 
-- GitHub Pages
-- Vercel
-- Netlify
-- Cloudflare Pages
-- any static hosting platform
+-   Vercel
+-   Netlify
+-   Cloudflare Pages
+-   GitHub Pages
 
-Typical deployment workflow:
+Typical workflow:
 
-    npm run build
-    deploy the dist/ folder
+``` bash
+npm run build
+```
 
----
+Deploy the `dist/` folder.
 
 ## AI-Agent Integration
 
 The repository includes an **AGENTS.md** file that helps AI coding
 assistants understand the project.
 
-It provides structured guidance about:
+It describes:
 
-- project architecture
-- coding conventions
-- contribution rules
-- project intent
+-   architecture
+-   coding conventions
+-   project intent
+-   contribution rules
 
-Tools that can benefit from this file include:
+Compatible tools include:
 
-- Cursor
-- GitHub Copilot
-- Claude Code
-- AI-assisted development agents
-
----
+-   Cursor
+-   GitHub Copilot
+-   Claude Code
+-   AI development agents
 
 ## Contributing
-
-If you want to contribute:
 
 1.  Fork the repository
 2.  Create a feature branch
@@ -268,32 +192,35 @@ If you want to contribute:
 
 Example:
 
-```bash
+``` bash
 git checkout -b feature/new-case
 ```
 
 Possible contributions:
 
-- new investigation cases
-- UI improvements
-- gameplay mechanics
-- translations
-- accessibility improvements
+-   new investigation cases
+-   UI improvements
+-   gameplay mechanics
+-   translations
+-   accessibility improvements
 
-We have set up a separate document containing our [contribution guidelines](CONTRIBUTING.md).
-
----
+  We have set up a separate document containing our [contribution guidelines](CONTRIBUTING.md).
 
 ## Troubleshooting
 
 ### Node Version
 
-If you experience dependency issues verify your Node version:
+Check your Node version:
 
-```bash
+``` bash
 node -v
 ```
 
 Recommended:
 
     Node 18+
+
+## Support
+
+If you encounter problems or want to discuss improvements, open an issue
+in the repository.
