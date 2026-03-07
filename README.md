@@ -74,17 +74,13 @@ cases can be created and shared.
 
 ### Gameplay
 
-```{=html}
 <p align="center">
-```
-`<img src="./public/docs/screenshot-1.png" width="800" alt="Login & Registration" />`{=html}
-`<br/>`{=html}`<br/>`{=html}
-`<img src="./public/docs/screenshot-2.png" width="800" alt="Investigation Dashboard" />`{=html}
-`<br/>`{=html}`<br/>`{=html}
-`<img src="./public/docs/screenshot-4.png" width="800" alt="Case Investigation" />`{=html}
-```{=html}
+  <img src="./public/docs/screenshot-1.png" width="800" alt="Login & Registration" />
+  <br/><br/>
+  <img src="./public/docs/screenshot-2.png" width="800" alt="Investigation Dashboard" />
+  <br/><br/>
+  <img src="./public/docs/screenshot-4.png" width="800" alt="Case Investigation" />
 </p>
-```
 
 ------------------------------------------------------------------------
 
