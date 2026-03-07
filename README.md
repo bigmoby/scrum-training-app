@@ -16,7 +16,7 @@ Analyze clues.\
 Spot anti‑patterns.\
 Discover what really went wrong in the Sprint.
 
-Because Agile is not learned from slides \
+Because Agile is not learned from slides,  
 it is learned by **recognizing dysfunctions in real teams**.
 
 ---
