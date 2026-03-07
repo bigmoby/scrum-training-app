@@ -30,8 +30,6 @@ Each case works like a **detective investigation**:
 
 The goal is to train **critical thinking and observation**, not memorization.
 
----
-
 ## 💡 Why this project exists
 
 Most Scrum training focuses on **rules of the framework**.
@@ -49,8 +47,6 @@ They fail because of subtle dysfunctions such as:
 
 This project simulates **real scenarios Scrum Masters encounter in real teams**.
 
----
-
 ## 🧩 Inspired by "Murder in the Sprint"
 
 This project is an **open‑source tribute** to the brilliant game:
@@ -63,15 +59,11 @@ The goal is not to replicate the original work but to create a
 **community‑extendable open platform** where new Agile investigation
 cases can be created and shared.
 
----
-
 ## 🎮 Gameplay
 
 <p align="center">
   <img src="./public/docs/gameplay.gif" width="900">
 </p>
-
----
 
 ## 🕵️ Example Cases
 
@@ -87,8 +79,6 @@ Everything looks fine... but something feels wrong.
 
 Can you identify the real anti-pattern?
 
----
-
 ### The Endless Refinement
 
 The team spends hours refining backlog items every week.  
@@ -100,8 +90,6 @@ But delivery is getting slower and slower.
 
 What is the underlying dysfunction?
 
----
-
 ### The Perfect Sprint
 
 Every Sprint ends exactly as planned.  
@@ -111,8 +99,6 @@ Velocity is stable.
 But customers never notice any improvement.
 
 Is this really a healthy Scrum team?
-
----
 
 ## 🧠 What you can learn
 
@@ -150,8 +136,6 @@ This allows tools like:
 
 to interact with the repository **safely and consistently**.
 
----
-
 ## 🚀 Running the project
 
 Clone the repository:
@@ -181,8 +165,6 @@ For full development and deployment documentation see:
 
 ➡️ **[DOC.md](DOC.md)**
 
----
-
 ## 🤝 Contributing
 
 This project is designed to be **community‑extendable**.
@@ -205,8 +187,6 @@ want to use the code or contribute to it.
 Contribution guidelines are available here:
 
 ➡️ **[CONTRIBUTING.md](CONTRIBUTING.md)**
-
----
 
 ## 🌍 Who is this for?
 
@@ -237,13 +217,9 @@ If you find this project useful and want to support its evolution:
   style="height:41px;width:174px;">
 </a>
 
----
-
 ## License
 
 Licensed under the [Apache License Version 2.0](LICENSE.md)
-
----
 
 [original_project]: https://github.com/scrum-training-app
 [contributors]: https://github.com/bigmoby/scrum-training-app/graphs/contributors
