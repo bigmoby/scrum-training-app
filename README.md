@@ -176,12 +176,12 @@ Contribution guidelines are available here:
 
 ## 🌍 Who is this for?
 
-• Scrum Masters\
-• Agile Coaches\
-• Developers\
-• Product Owners\
-• Agile trainers\
-• facilitation workshops
+- silent Product Owners
+- stakeholder interference
+- endless refinements
+- fake Definition of Done
+- cargo-cult Scrum practices
+- teams delivering output but not value
 
 ---
 
