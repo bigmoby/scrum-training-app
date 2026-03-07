@@ -1,4 +1,4 @@
-# Scrum Training App
+# Scrum Training App — Investigate Agile Anti-Patterns
 
 ![Project Stage][project-stage-shield]
 [![License][license-shield]](LICENSE.md)
