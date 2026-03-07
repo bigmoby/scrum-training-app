@@ -75,7 +75,7 @@ cases can be created and shared.
 ### Gameplay
 
 <p align="center">
-  <img src="./docs/gameplay.gif" width="900">
+  <img src="./public/docs/gameplay.gif" width="900">
 </p>
 
 ---
