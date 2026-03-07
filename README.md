@@ -6,18 +6,13 @@
 ![Maintenance][maintenance-shield]
 [![GitHub Activity][commits-shield]][commits]
 
-**Learn Scrum the hard way:**\
-by investigating real Agile dysfunctions.
+**Learn Scrum the hard way by investigating real Agile dysfunctions.**
 
-Instead of memorizing Scrum theory, this project lets you **solve investigative cases** inspired by real situations that Scrum Masters and
-Agile teams face every day.
+Instead of memorizing Scrum theory, this project lets you **solve investigative cases** inspired by real situations that Scrum Masters and Agile teams face every day.
 
-Analyze clues.\
-Spot anti‑patterns.\
-Discover what really went wrong in the Sprint.
+Analyze clues, spot anti-patterns, and discover what really went wrong in the Sprint.
 
-Because Agile is not learned from slides,  
-it is learned by **recognizing dysfunctions in real teams**.
+Because Agile is not learned from slides, it is learned by **recognizing dysfunctions in real teams**.
 
 ---
 
@@ -70,9 +65,7 @@ cases can be created and shared.
 
 ---
 
-## 📸 Screenshots
-
-### Gameplay
+## 🎮 Gameplay
 
 <p align="center">
   <img src="./public/docs/gameplay.gif" width="900">
