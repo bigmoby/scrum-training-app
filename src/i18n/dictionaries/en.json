@@ -29,7 +29,21 @@
     "newCase": "New Case",
     "newCaseDesc": "New anti-patterns reported in the last Sprint. The team needs your intuition.",
     "investigateNow": "Investigate Now",
-    "loading": "Loading..."
+    "loading": "Loading...",
+    "seeStatistics": "Community Statistics",
+    "adminPanel": "Admin Panel"
+  },
+  "statistics": {
+    "title": "Community Statistics",
+    "subtitle": "Discover how other teams voted in total anonymity. See the most suspected culprits for each cold case.",
+    "backToDashboard": "Back to Dashboard",
+    "noData": "No statistical data available at the moment.",
+    "plays": "Plays",
+    "locationVotes": "Location Votes",
+    "suspectVotes": "Suspect Votes",
+    "weaponVotes": "Weapon Votes",
+    "showStoryBtn": "Read Case File",
+    "hideStoryBtn": "Close Case File"
   },
   "play": {
     "abandonCase": "Abandon Case",
@@ -93,7 +107,10 @@
   },
   "admin": {
     "panelTitle": "Admin Databank",
+    "panelSubtitle": "Top Secret Investigation Files",
+    "exitAdminBtn": "Exit Admin Level",
     "casesIndex": "Investigation Files Index",
+    "archiveStatus": "Archive Status",
     "newCaseBtn": "Create New Case",
     "editCaseBtn": "Edit",
     "deleteCaseBtn": "Delete",
@@ -122,12 +139,13 @@
     "formError": "Error saving the case. Check the fields.",
     "exportBtn": "Export JSON",
     "importBtn": "Import JSON",
-    "clearBtn": "Clear DB",
+    "importCasesOnlyBtn": "Import Cases Only",
+    "clearBtn": "Clear DB Cases",
     "clearConfirm": "WARNING: Are you sure you want to delete ALL cases from the database? This action cannot be undone.",
     "importSuccess": "Cases imported successfully!",
     "clearSuccess": "Database cleared successfully.",
     "processing": "Processing...",
-    "resetLeaderboardBtn": "Reset Leaderboard",
+    "resetLeaderboardBtn": "Reset Leaderboard and Stats",
     "resetLeaderboardConfirm": "WARNING: This will permanently delete ALL REGISTERED TEAMS, their passwords, and play history. Do you want to proceed?",
     "resetLeaderboardSuccess": "Leaderboard and scores reset to zero!"
   }

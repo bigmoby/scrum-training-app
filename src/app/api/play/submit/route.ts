@@ -52,11 +52,15 @@ export async function POST(request: Request) {
       data: {
         teamId,
         caseId,
+        caseTitle: caseData.title,
+        locationAnswer: location,
+        suspectAnswer: suspect,
+        weaponAnswer: weapon,
         isCorrectLocation,
         isCorrectSuspect,
         isCorrectWeapon,
         scoreAwarded
-      }
+      } as any
     });
 
     // Update Team Total Score

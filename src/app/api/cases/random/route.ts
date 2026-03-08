@@ -21,7 +21,9 @@ export async function GET(request: Request) {
       select: { caseId: true }
     });
     
-    const playedCaseIds = playedCases.map(pc => pc.caseId);
+    const playedCaseIds = playedCases
+      .map(pc => pc.caseId)
+      .filter((id): id is string => id !== null);
 
     // Fetch available cases matching the requested language
     // Note: if a user switches language they might play the translated version of a case they already played in another language,

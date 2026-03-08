@@ -54,9 +54,13 @@ model Case {
 model PlaySession {
   id               String   @id @default(uuid())
   teamId           String
-  caseId           String
+  caseId           String?
+  caseTitle        String?  // Snapshot of title for history/stats
   team             Team     @relation(fields: [teamId], references: [id])
-  caseItem         Case     @relation(fields: [caseId], references: [id])
+  caseItem         Case?    @relation(fields: [caseId], references: [id], onDelete: SetNull)
+  locationAnswer   String?
+  suspectAnswer    String?
+  weaponAnswer     String?
   isCorrectLocation Boolean  @default(false)
   isCorrectSuspect  Boolean  @default(false)
   isCorrectWeapon   Boolean  @default(false)

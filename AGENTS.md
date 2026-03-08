@@ -96,6 +96,9 @@ model PlaySession {
   isCorrectLocation Boolean  @default(false)
   isCorrectSuspect  Boolean  @default(false)
   isCorrectWeapon   Boolean  @default(false)
+  locationAnswer    String?
+  suspectAnswer     String?
+  weaponAnswer      String?
   scoreAwarded      Int      @default(0)
   completedAt       DateTime @default(now())
 }
@@ -105,8 +108,8 @@ model PlaySession {
 ## Repository Structure
 
 Key paths:
-- `src/app/` — Next.js App Router structure. Contains specific routes (`/dashboard`, `/play/[id]`, `/leaderboard`, `/admin`, etc.) and API routes (`/api/...`).
-- `src/components/` — Isolated UI components (cards, buttons, forms, modals).
+- `src/app/` — Next.js App Router structure. Contains specific routes (`/dashboard`, `/play/[id]`, `/leaderboard`, `/statistics`, `/admin`, etc.) and API routes (`/api/...`).
+- `src/components/` — Isolated UI components (cards, buttons, forms, modals, StatsDisplay).
 - `src/lib/` — Shared utilities and logic.
 - `prisma/` — Database schema (`schema.prisma`) and seed logic (`seed.ts`).
 - `cases/` — Contains JSON files defining the available mystery cases (e.g. `scrum-cases-1.json`).
@@ -169,9 +172,14 @@ You will need to create a modern and responsive user interface supporting the fo
 6. **Admin Panel (`/admin/...`)**
    - Visible and accessible only to Teams with `isAdmin = true` (e.g., "Admin Team").
    - Includes the "Databank": a complete CRUD to manage (add, edit, delete) `Case`s.
-   - Allows a global reset ("Reset Leaderboard") which must physically delete all `PlaySession` records, delete all normal teams excluding Admins, and reset scores to zero.
-   - Allows global clearance and JSON import/export of the Cases Database.
-   - Form editor to manage all Case fields, including language (`lang`), story, hints, possibility arrays for the game (`locationChoices`, `suspectChoices`, `weaponChoices`), and solutions/explanations for Location, Suspect, and Weapon.
+    - Allows a global reset ("Reset Leaderboard") which must physically delete all `PlaySession` records, delete all normal teams excluding Admins, and reset scores and statistics to zero.
+    - Allows global clearance (**Clear Database**) and JSON import/export of the Database.
+    - **Advanced Import/Export**: The system supports full dump JSONs (cases, teams, sessions). The import engine uses atomic transactions and ID-translation mapping to preserve relationships even if IDs differ across environments. Partial "Cases Only" imports are also supported with a dedicated UI action.
+    - Form editor to manage all Case fields, including language (`lang`), story, hints, possibility arrays for the game (`locationChoices`, `suspectChoices`, `weaponChoices`), and solutions/explanations for Location, Suspect, and Weapon.
+7. **Community Statistics (`/statistics`)**
+   - Displays aggregated and anonymous voting statistics for each case based on all `PlaySession` records.
+   - Shows the voting percentages for Location, Suspect, and Weapon choices.
+   - Includes a collapsible section to view the case story and hint for context.
 
 ## API Endpoints
 
@@ -186,7 +194,8 @@ The application must expose the following Next.js endpoints (located in `src/app
 - `/api/play/submit`: POST (evaluation of an investigation, saving the `PlaySession` and updating the team's `totalScore`)
 - `/api/leaderboard`: GET (calculation of top teams ranking)
 - `/api/admin/cases`: GET, POST, PUT, DELETE (restricted access for case Databank CRUD)
-- `/api/admin/cases/export` and `/import`: full export and partial JSON upload.
+- `/api/admin/cases/export` and `/api/admin/cases/import`: full JSON dump export (cases, teams, sessions) and atomic import with ID remapping support.
+- `/api/admin/cases/clear`: DELETE (restricted access to wipe all investigative cases)
 - `/api/admin/leaderboard/reset`: DELETE (restricted access to wipe sessions, delete non-admin players and reset residual scores to 0)
 
 ## Design Principles and UI/UX
@@ -195,6 +204,7 @@ The application must expose the following Next.js endpoints (located in `src/app
 - **Animations:** Framer Motion should be used to animate page transitions, modal openings, card hovering, and revealing the game's "verdict" outcome.
 - **Reusable Components:** Implement buttons, form panels, and cards as isolated components (inside `/src/components`).
 - **Hint Toggle:** In the game interface (`/play/[id]`), the "Hint" field MUST NOT be shown by default. It must be managed with a toggle mechanism (hide/reveal hint button).
+- **Admin UX Distinction**: Admin actions must be logically grouped (e.g., "Data Management" vs. "Danger Zone") with appropriate visual weight and "Premium/Glassmorphism" styling.
 
 ## AI Development Instructions
 

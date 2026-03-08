@@ -29,7 +29,21 @@
     "newCase": "Nuovo Caso",
     "newCaseDesc": "Ci sono nuovi antipattern segnalati nell'ultimo Sprint. Il team ha bisogno del tuo intuito.",
     "investigateNow": "Indaga Ora",
-    "loading": "Caricamento..."
+    "loading": "Caricamento...",
+    "seeStatistics": "Statistiche Community",
+    "adminPanel": "Pannello Admin"
+  },
+  "statistics": {
+    "title": "Statistiche Community",
+    "subtitle": "Scopri come hanno votato gli altri team in totale anonimato. Vedi quali sono i colpevoli più sospettati per ogni cold case.",
+    "backToDashboard": "Torna alla Dashboard",
+    "noData": "Nessun dato statistico disponibile al momento.",
+    "plays": "Giocate",
+    "locationVotes": "Voti Luogo",
+    "suspectVotes": "Voti Sospettato",
+    "weaponVotes": "Voti Arma",
+    "showStoryBtn": "Leggi Fascicolo",
+    "hideStoryBtn": "Chiudi Fascicolo"
   },
   "play": {
     "abandonCase": "Abbandona Caso",
@@ -93,7 +107,10 @@
   },
   "admin": {
     "panelTitle": "Admin Databank",
+    "panelSubtitle": "Archivio Segreto Fascicoli Investigativi",
+    "exitAdminBtn": "Torna alla Dashboard",
     "casesIndex": "Indice Fascicoli Investigativi",
+    "archiveStatus": "Stato Archivio",
     "newCaseBtn": "Crea Nuovo Caso",
     "editCaseBtn": "Modifica",
     "deleteCaseBtn": "Elimina",
@@ -122,12 +139,13 @@
     "formError": "Errore durante il salvataggio. Controlla i campi.",
     "exportBtn": "Esporta JSON",
     "importBtn": "Importa JSON",
-    "clearBtn": "Svuota DB",
+    "importCasesOnlyBtn": "Importa Solo Casi",
+    "clearBtn": "Svuota DB Casi",
     "clearConfirm": "ATTENZIONE: Sei sicuro di voler eliminare TUTTI i casi dal database? L'operazione è irreversibile.",
     "importSuccess": "Casi importati con successo!",
     "clearSuccess": "Database svuotato correttamente.",
     "processing": "Elaborazione in corso...",
-    "resetLeaderboardBtn": "Resetta Classifica",
+    "resetLeaderboardBtn": "Resetta Classifica e Statistiche",
     "resetLeaderboardConfirm": "ATTENZIONE: Verranno eliminati permanentemente TUTTE LE SQUADRE registrate, le loro password e la cronologia delle giocate. Vuoi procedere?",
     "resetLeaderboardSuccess": "Classifica e Punteggi ripartiti da zero!"
   }

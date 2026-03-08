@@ -21,15 +21,11 @@ export async function DELETE(request: Request) {
   }
 
   try {
-    // Eliminiamo logicamente le relazioni o facciamo pulizia a cascata. 
-    // Siccome PlaySession è legato ai casi tramite foreign key, se c'è restrict fallirebbe. 
-    // Prisma con SQLite predefinito blocca se ci sono sessioni legate, quindi le dobbiamo eliminare prima
-    await prisma.playSession.deleteMany({});
-    
-    // Dopodiché eliminiamo tutti i casi
+    // Dopodiché eliminiamo tutti i casi. 
+    // Grazie alla relazione SetNull definita nello schema, le sessioni rimarranno nel DB scollegate.
     await prisma.case.deleteMany({});
     
-    return NextResponse.json({ success: true, message: 'All cases and play sessions cleared successfully' });
+    return NextResponse.json({ success: true, message: 'All cases cleared successfully. Statistics preserved.' });
   } catch (error: any) {
     return NextResponse.json({ error: error.message || 'Failed to clear the database' }, { status: 500 });
   }

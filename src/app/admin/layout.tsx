@@ -3,10 +3,13 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
+import { useTranslation } from '@/i18n/LanguageContext';
+import Link from 'next/link';
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   const [isAuthorized, setIsAuthorized] = useState(false);
   const router = useRouter();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const saved = localStorage.getItem('scrum_team');
@@ -38,11 +41,11 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     <div className="w-full max-w-5xl mx-auto pt-6 px-4 pb-20">
       <div className="mb-8 flex flex-col sm:flex-row gap-4 justify-between items-center bg-black/60 border border-primary/30 p-4 rounded-2xl shadow-[0_0_15px_rgba(99,102,241,0.2)]">
         <div>
-          <h2 className="text-xl font-bold font-mono tracking-widest text-primary drop-shadow-[0_0_8px_rgba(99,102,241,0.8)]">ADMIN DATABANK</h2>
-          <p className="text-xs text-gray-500 font-mono">Top Secret Investigation Files</p>
+          <h2 className="text-xl font-bold font-mono tracking-widest text-primary drop-shadow-[0_0_8px_rgba(99,102,241,0.8)]">{t('admin', 'panelTitle')}</h2>
+          <p className="text-xs text-gray-500 font-mono">{t('admin', 'panelSubtitle')}</p>
         </div>
         <button onClick={() => router.push('/dashboard')} className="text-sm text-gray-400 hover:text-white transition-colors border border-white/10 px-4 py-2 rounded-lg hover:bg-white/5 font-medium">
-          Exit Admin Level
+          {t('admin', 'exitAdminBtn')}
         </button>
       </div>
       <motion.div

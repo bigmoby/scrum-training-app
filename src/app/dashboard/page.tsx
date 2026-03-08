@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
-import { Trophy, PlayCircle, LogOut, ArrowRight, ShieldAlert, Settings } from 'lucide-react';
+import { Trophy, PlayCircle, LogOut, ArrowRight, ShieldAlert, Settings, BarChart3 } from 'lucide-react';
 import Link from 'next/link';
 import { useTranslation } from '@/i18n/LanguageContext';
 
@@ -63,7 +63,7 @@ export default function Dashboard() {
                 href="/admin"
                 className="flex items-center gap-2 px-4 py-2 rounded-xl bg-primary/10 hover:bg-primary/20 text-primary transition-colors border border-primary/20"
               >
-                <Settings className="w-4 h-4" /> <span className="hidden sm:inline">Admin Panel</span>
+                <Settings className="w-4 h-4" /> <span className="hidden sm:inline">{t('dashboard', 'adminPanel')}</span>
               </Link>
             )}
             <button 
@@ -84,12 +84,20 @@ export default function Dashboard() {
             <p className="text-5xl font-bold text-white mb-6">
               {team.totalScore} <span className="text-xl text-primary font-normal">{t('dashboard', 'pts')}</span>
             </p>
-            <Link 
-              href="/leaderboard"
-              className="inline-flex items-center gap-2 text-primary hover:text-white transition-colors"
-            >
-              {t('dashboard', 'seeLeaderboard')} <ArrowRight className="w-4 h-4" />
+            <div className="flex flex-col gap-3">
+              <Link 
+                href="/leaderboard"
+                className="inline-flex max-w-fit items-center gap-2 text-blue-400 hover:text-white transition-colors"
+              >
+                {t('dashboard', 'seeLeaderboard')} <ArrowRight className="w-4 h-4 ml-1" />
+              </Link>
+              <Link 
+                href="/statistics"
+                className="inline-flex max-w-fit items-center gap-2 text-blue-400 hover:text-white transition-colors"
+               >
+                {t('dashboard', 'seeStatistics')} <BarChart3 className="w-4 h-4 ml-1" />
             </Link>
+            </div>
           </motion.div>
 
           <motion.div whileHover={{ scale: 1.02 }} className="glass-panel p-8 rounded-3xl relative overflow-hidden bg-gradient-to-br from-primary/20 to-transparent border-primary/30">

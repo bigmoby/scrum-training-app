@@ -25,11 +25,25 @@ export async function GET(request: Request) {
       orderBy: { createdAt: 'asc' },
     });
     
-    // Rimuoviamo l'id interno e date per esportare un oggetto pulito, portabile su altri database
-    const exportableCases = cases.map(({ id, createdAt, ...rest }) => rest);
+    const teams = await prisma.team.findMany({
+      orderBy: { createdAt: 'asc' },
+    });
+
+    const playSessions = await prisma.playSession.findMany({
+      orderBy: { completedAt: 'asc' },
+    });
     
-    return NextResponse.json(exportableCases);
+    // Return a full dump object. We no longer strip 'id' so that relationships
+    // can be maintained when importing the dump back.
+    const dump = {
+      cases,
+      teams,
+      playSessions
+    };
+    
+    return NextResponse.json(dump);
   } catch (error) {
-    return NextResponse.json({ error: 'Failed to export cases' }, { status: 500 });
+    console.error('Export error:', error);
+    return NextResponse.json({ error: 'Failed to export database dump' }, { status: 500 });
   }
 }
