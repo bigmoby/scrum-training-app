@@ -16,7 +16,7 @@ npm run dev
 
 Open the application:
 
-http://localhost:5173
+http://localhost:3000
 
 ## Requirements
 
@@ -75,7 +75,7 @@ npm run dev
 
 The application will usually run at:
 
-http://localhost:5173
+http://localhost:3000
 
 ## Production Build
 
