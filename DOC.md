@@ -65,6 +65,16 @@ npx prisma db push
 npx prisma db seed
 ```
 
+## 🔐 Admin Access
+
+After running the seed command (`npx prisma db seed`), a default admin team is created with the following credentials:
+
+- **Team Name:** Admin Team
+- **Email:** admin@scrumtrainingapp.com
+- **Password:** admin123
+
+You can use these credentials to log in and access the Admin Panel at `/admin`.
+
 ## Running the Project
 
 Start the development server:
