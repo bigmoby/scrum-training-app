@@ -71,7 +71,7 @@ export default function CaseForm({ initialData = null, isEdit = false }: CaseFor
     const team = JSON.parse(saved);
 
     try {
-      const url = isEdit ? `/api/admin/cases/${initialData.id}` : '/api/admin/cases';
+      const url = isEdit ? `/api/admin/cases/${encodeURIComponent(initialData.id)}` : '/api/admin/cases';
       const method = isEdit ? 'PUT' : 'POST';
 
       const payload = {

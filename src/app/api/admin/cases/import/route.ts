@@ -46,7 +46,13 @@ export async function POST(request: Request) {
     }
 
     // NORMALIZE: Ensure every item has a temporary ID for mapping if none exists
-    casesToProcess.forEach((c, i) => { if (!c.id) c.id = `dump-case-${i}-${c.title}`.substring(0, 50); });
+    const slugify = (text: string) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+    
+    casesToProcess.forEach((c, i) => { 
+      if (!c.id) {
+        c.id = `dump-case-${i}-${slugify(c.title || 'untitled')}`.substring(0, 50); 
+      }
+    });
     teamsToProcess.forEach((t, i) => { if (!t.id) t.id = `dump-team-${i}-${t.name}`.substring(0, 50); });
     sessionsToProcess.forEach((s, i) => { if (!s.id) s.id = `dump-session-${Date.now()}-${i}`; });
 

@@ -51,7 +51,7 @@ export default function AdminDashboard() {
     if (!confirm(t('admin', 'confirmDelete'))) return;
     
     try {
-      const res = await fetch(`/api/admin/cases/${caseId}`, {
+      const res = await fetch(`/api/admin/cases/${encodeURIComponent(caseId)}`, {
         method: 'DELETE',
         headers: { 'x-team-id': teamId }
       });
@@ -308,7 +308,7 @@ export default function AdminDashboard() {
                     <td className="px-8 py-6 text-right">
                       <div className="flex items-center justify-end gap-3 opacity-60 group-hover:opacity-100 transition-opacity">
                         <Link 
-                          href={`/admin/cases/${c.id}`}
+                          href={`/admin/cases/${encodeURIComponent(c.id)}`}
                           className="p-3 text-gray-400 hover:text-white bg-white/5 hover:bg-white/10 rounded-xl transition-all hover:scale-110 shadow-sm"
                           title={t('admin', 'editCaseBtn')}
                         >

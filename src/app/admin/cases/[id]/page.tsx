@@ -20,7 +20,7 @@ export default function EditCasePage() {
         if (!saved) throw new Error('Unauthorized');
         const team = JSON.parse(saved);
 
-        const res = await fetch(`/api/admin/cases/${id}`, {
+        const res = await fetch(`/api/admin/cases/${encodeURIComponent(id)}`, {
           headers: { 'x-team-id': team.id }
         });
         
